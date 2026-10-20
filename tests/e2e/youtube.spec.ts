@@ -2,7 +2,7 @@ import { chromium, expect, test } from '@playwright/test';
 import { mkdir, mkdtemp, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import videos from './videos.json' with { type: 'json' };
-import { classifyRun } from './classify';
+import { BOT_CHECK_PATTERN, classifyRun } from './classify';
 
 test('YouTube signed-out playback has no ads or enforcement warning', async () => {
   const extension = resolve('dist');
@@ -25,7 +25,7 @@ test('YouTube signed-out playback has no ads or enforcement warning', async () =
         const startedAt = Date.now();
         let firstTime: number | undefined;
         while (Date.now() - startedAt < 20_000) {
-          const sample = await page.evaluate(() => {
+          const sample = await page.evaluate((botCheckPattern) => {
             const visible = (el: Element) => el.getBoundingClientRect().height > 0 && getComputedStyle(el).visibility !== 'hidden';
             const players = [...document.querySelectorAll<HTMLVideoElement>('.html5-video-player video')].filter(visible);
             const video = players.find(el => el.readyState >= 2 && !el.paused) ?? players.at(-1);
@@ -34,10 +34,10 @@ test('YouTube signed-out playback has no ads or enforcement warning', async () =
             return {
               sawAdShowing: !!document.querySelector('.html5-video-player.ad-showing'),
               sawEnforcement: [...document.querySelectorAll('ytd-enforcement-message-view-model, .ytp-error-content-wrap')].some(el => visible(el) && /ad.?block|ad blockers|violat.*terms/i.test(el.textContent ?? '')),
-              botCheck: /confirm you.?re not a bot|sign in to confirm|sign in to watch/i.test(text),
+              botCheck: new RegExp(botCheckPattern, 'i').test(text),
               time: video?.currentTime,
             };
-          });
+          }, BOT_CHECK_PATTERN);
           observation.sawAdShowing ||= sample.sawAdShowing;
           observation.sawEnforcement ||= sample.sawEnforcement;
           observation.botCheck ||= sample.botCheck;
