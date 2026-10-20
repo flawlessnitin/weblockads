@@ -1,4 +1,7 @@
+import type { IBackgroundCallback } from '@ghostery/adblocker-content';
+
 export type Message =
+  | { type: 'cosmetics'; req: IBackgroundCallback }
   | { type: 'popup:getState' }
   | { type: 'popup:setSiteEnabled'; site: string; enabled: boolean }
   | { type: 'stats:youtubeAds'; count: number; seconds: number }
