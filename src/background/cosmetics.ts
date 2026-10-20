@@ -8,6 +8,9 @@ export function loadEngine(bytes: Uint8Array): FiltersEngine {
 }
 
 let enginePromise: Promise<FiltersEngine> | undefined;
+// A bounded last-sheet cache avoids repeatedly inserting generic matches that
+// the library can return for different newly discovered links/classes.
+const lastStyles = new Map<string, string>();
 export function getCosmeticEngine(): Promise<FiltersEngine> {
   enginePromise ??= fetch(chrome.runtime.getURL('filters/cosmetic-engine.bin'))
     .then(async (response) => {
@@ -24,6 +27,8 @@ export async function handleCosmeticsRequest(
   ctx: { settings: Settings; youtubeHideSelectors: string[] },
 ): Promise<IMessageFromBackground> {
   const empty: IMessageFromBackground = { active: false, styles: '', scripts: [], extended: [] };
+  const frameKey = `${sender.tabId}:${sender.frameId}`;
+  if (req.lifecycle === 'start') lastStyles.delete(frameKey);
   const site = getSiteKey(sender.url);
   if (site === null || ctx.settings.disabledSites.includes(site)) return empty;
   const result = engine.getCosmeticsFilters({
@@ -33,11 +38,23 @@ export async function handleCosmeticsRequest(
     getRulesFromHostname: req.lifecycle === 'start',
     getRulesFromDOM: true, getInjectionRules: false, getExtendedRules: false,
   });
-  const extra = [...ctx.settings.customHides[site] ?? []];
-  if (site === 'youtube.com' && ctx.settings.youtubeEnabled) extra.push(...ctx.youtubeHideSelectors);
+  // USER styles persist for this document and automatically match new nodes.
+  // Re-inserting them on every DOM update forces needless style recalculation.
+  const extra = req.lifecycle === 'start' ? [...ctx.settings.customHides[site] ?? []] : [];
+  if (req.lifecycle === 'start' && site === 'youtube.com' && ctx.settings.youtubeEnabled) extra.push(...ctx.youtubeHideSelectors);
   const css = result.styles + extra.map((selector) => `${selector}{display:none!important}`).join('\n');
-  if (css) {
-    await chrome.scripting.insertCSS({ target: { tabId: sender.tabId, frameIds: [sender.frameId] }, css, origin: 'USER' as chrome.scripting.StyleOrigin });
+  if (css && lastStyles.get(frameKey) !== css) {
+    if (css.length <= 64_000) {
+      lastStyles.delete(frameKey);
+      lastStyles.set(frameKey, css);
+      if (lastStyles.size > 256) lastStyles.delete(lastStyles.keys().next().value!);
+    }
+    try {
+      await chrome.scripting.insertCSS({ target: { tabId: sender.tabId, frameIds: [sender.frameId] }, css, origin: 'USER' as chrome.scripting.StyleOrigin });
+    } catch (error) {
+      if (lastStyles.get(frameKey) === css) lastStyles.delete(frameKey);
+      throw error;
+    }
   }
   return { ...result, styles: css, scripts: [], extended: [] };
 }

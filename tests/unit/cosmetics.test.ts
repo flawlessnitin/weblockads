@@ -43,4 +43,30 @@ describe('cosmetic filtering', () => {
     const response = await handleCosmeticsRequest(engine(), req, sender, { settings, youtubeHideSelectors: [] });
     expect(response.scripts).toEqual([]);
   });
+  it('does not reinsert persistent hides when scrolling adds new DOM features', async () => {
+    const filterEngine = loadEngine(FiltersEngine.parse('##.new-ad').serialize());
+    const context = { settings: { ...settings, customHides: { 'youtube.com': ['#promo'] } }, youtubeHideSelectors: ['ytd-ad-slot-renderer'] };
+    const youtube = { ...sender, url: 'https://www.youtube.com/' };
+    await handleCosmeticsRequest(filterEngine, { lifecycle: 'start', classes: [], ids: [], hrefs: [] }, youtube, context);
+    const update = await handleCosmeticsRequest(filterEngine, { lifecycle: 'dom-update', classes: ['new-ad'], ids: [], hrefs: [] }, youtube, context);
+    expect(update.styles).toContain('.new-ad');
+    expect(update.styles).not.toContain('#promo');
+    expect(update.styles).not.toContain('ytd-ad-slot-renderer');
+    const unchanged = await handleCosmeticsRequest(filterEngine, { lifecycle: 'dom-update', classes: ['new-card'], ids: [], hrefs: [] }, youtube, context);
+    expect(unchanged.styles).toBe('');
+    expect(fake.scripting.insertCSS).toHaveBeenCalledTimes(2);
+  });
+  it('skips repeated generic CSS but applies it again in a new document or frame', async () => {
+    const filterEngine = loadEngine(FiltersEngine.parse('##.new-ad').serialize());
+    const context = { settings, youtubeHideSelectors: [] };
+    await handleCosmeticsRequest(filterEngine, { lifecycle: 'start', classes: [], ids: [], hrefs: [] }, sender, context);
+    const update = { lifecycle: 'dom-update' as const, classes: ['new-ad'], ids: [], hrefs: [] };
+    await handleCosmeticsRequest(filterEngine, update, sender, context);
+    await handleCosmeticsRequest(filterEngine, update, sender, context);
+    expect(fake.scripting.insertCSS).toHaveBeenCalledTimes(1);
+    await handleCosmeticsRequest(filterEngine, update, { ...sender, frameId: 2 }, context);
+    expect(fake.scripting.insertCSS).toHaveBeenCalledTimes(2);
+    await handleCosmeticsRequest(filterEngine, { ...update, lifecycle: 'start' }, sender, context);
+    expect(fake.scripting.insertCSS).toHaveBeenCalledTimes(3);
+  });
 });
