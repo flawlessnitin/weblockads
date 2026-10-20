@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ad blocker</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <main class="popup">
+    <header class="header">
+      <div class="brand"><img src="icons/icon-32.png" width="26" height="26" alt=""><b id="product-name"></b></div>
+      <div class="site-control"><span id="site"></span><button id="site-switch" class="switch" type="button" role="switch" aria-label="Block ads on this site" aria-checked="false" disabled><span></span></button></div>
+    </header>
+    <p id="status" role="status" hidden></p>
+    <div id="unavailable" hidden>Not available on this page</div>
+    <section class="hero" id="hero" aria-label="Blocked on this page">
+      <div id="ring" class="ring"><div class="ring-center"><b id="page-total">0</b><span>on this page</span></div></div>
+      <div class="legend">
+        <div><span class="video-color">●</span> Video ads <b id="video-count">0</b></div>
+        <div><span class="ads-color">●</span> Ads &amp; trackers <b id="ads-count">0</b></div>
+        <div><span class="popups-color">●</span> Pop-ups <b id="popups-count">0</b></div>
+      </div>
+    </section>
+    <section class="stats" aria-label="All-time statistics">
+      <div class="tile"><b id="all-total">0</b><div>blocked all time</div></div>
+      <div class="tile"><b id="time-saved">0 m</b><div>of ads skipped</div></div>
+    </section>
+    <nav class="tools" aria-label="Tools">
+      <button id="hide-element" type="button" disabled><span aria-hidden="true">✎</span>Hide element</button>
+      <button id="report-site" type="button" disabled><span aria-hidden="true">⚑</span>Report site</button>
+      <button id="settings" type="button"><span aria-hidden="true">⚙</span>Settings</button>
+    </nav>
+    <footer><span id="rules-age">● Rules updated just now</span><span id="version"></span></footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

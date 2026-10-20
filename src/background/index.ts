@@ -1,10 +1,11 @@
 import { getSettings } from '../shared/storage';
-import { syncSiteRules } from './site-toggle';
+import { setSiteEnabled, syncSiteRules } from './site-toggle';
 import { syncContentScripts } from './content-scripts';
 import { getCosmeticEngine, handleCosmeticsRequest } from './cosmetics';
 import type { Message } from '../shared/messages';
 import { checkForUpdate, getActiveRules } from '../rules/updater';
 import { flushStats, recordAdsTrackers, recordVideoAds, resetTab } from './stats';
+import { getPopupState } from './popup-state';
 
 async function initialize(): Promise<void> {
   const settings = await getSettings();
@@ -29,6 +30,13 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 chrome.tabs.onRemoved.addListener((tabId) => flushStats().then(() => chrome.storage.session.remove(`tab:${tabId}`)));
 
 chrome.runtime.onMessage.addListener((message: Message, sender, sendResponse) => {
+  if (message.type === 'popup:getState' || message.type === 'popup:setSiteEnabled') {
+    const result = message.type === 'popup:getState'
+      ? chrome.tabs.query({ active: true, currentWindow: true }).then(([tab]) => getPopupState({ id: tab?.id ?? -1, url: tab?.url }))
+      : setSiteEnabled(message.site, message.enabled).then(() => ({ ok: true }));
+    result.then(sendResponse).catch((error: unknown) => sendResponse({ error: error instanceof Error ? error.message : 'Site settings failed' }));
+    return true;
+  }
   if (message.type === 'stats:youtubeAds') {
     if (sender.tab?.id !== undefined) recordVideoAds(sender.tab.id, message.count, message.seconds);
     sendResponse({ ok: true });
