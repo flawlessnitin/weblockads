@@ -1,4 +1,5 @@
-import { getSettings } from '../shared/storage';
+import { getSettings, updateSettings } from '../shared/storage';
+import { getSiteKey } from '../shared/domain';
 import { setSiteEnabled, syncSiteRules } from './site-toggle';
 import { syncContentScripts } from './content-scripts';
 import { getCosmeticEngine, handleCosmeticsRequest } from './cosmetics';
@@ -30,6 +31,25 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 chrome.tabs.onRemoved.addListener((tabId) => flushStats().then(() => chrome.storage.session.remove(`tab:${tabId}`)));
 
 chrome.runtime.onMessage.addListener((message: Message, sender, sendResponse) => {
+  if (message.type === 'picker:start' || message.type === 'picker:save') {
+    const result = message.type === 'picker:start'
+      ? chrome.scripting.executeScript({ target: { tabId: message.tabId }, files: ['content/picker.js'] })
+      : (async () => {
+        const site = getSiteKey(sender.url ?? '');
+        if (!site || site !== message.site || !message.selector) throw new Error('Invalid hide request');
+        const settings = await getSettings();
+        await updateSettings({ customHides: {
+          ...settings.customHides, [site]: [...new Set([...settings.customHides[site] ?? [], message.selector])],
+        } });
+        if (sender.tab?.id !== undefined) await chrome.scripting.insertCSS({
+          target: { tabId: sender.tab.id, frameIds: [sender.frameId ?? 0] },
+          css: `${message.selector}{display:none!important}`, origin: 'USER' as chrome.scripting.StyleOrigin,
+        });
+        return { ok: true };
+      })();
+    result.then(() => sendResponse({ ok: true })).catch((error: unknown) => sendResponse({ error: error instanceof Error ? error.message : 'Element picker failed' }));
+    return true;
+  }
   if (message.type === 'popup:getState' || message.type === 'popup:setSiteEnabled') {
     const result = message.type === 'popup:getState'
       ? chrome.tabs.query({ active: true, currentWindow: true }).then(([tab]) => getPopupState({ id: tab?.id ?? -1, url: tab?.url }))

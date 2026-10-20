@@ -1,7 +1,8 @@
-import { PRODUCT_NAME } from '../shared/config';
+import { PRODUCT_NAME, REPO_SLUG } from '../shared/config';
 import type { PopupState } from '../background/popup-state';
 import { formatAgo, formatCount, formatDuration } from './format';
 import { ringGradient } from './ring';
+import { buildReportUrl } from './report';
 
 const element = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
 const setText = (id: string, text: string) => { element(id).textContent = text; };
@@ -33,6 +34,21 @@ async function initialize(): Promise<void> {
   setText('time-saved', formatDuration(state.totals.adSecondsSkipped));
   setText('rules-age', `● Rules updated ${formatAgo(state.rulesReceivedAt)}`);
   setText('version', `v${state.version}`);
+  element<HTMLButtonElement>('hide-element').disabled = state.site === null || tab?.id === undefined;
+  element<HTMLButtonElement>('report-site').disabled = state.site === null || !tab?.url;
+  element('hide-element').title = 'Choose an element to hide. Press Esc to cancel.';
+  element('hide-element').addEventListener('click', () => {
+    void chrome.runtime.sendMessage({ type: 'picker:start', tabId: tab!.id }).then((result) => {
+      if (result?.error) throw new Error(result.error);
+      window.close();
+    }).catch(showError);
+  });
+  element('report-site').addEventListener('click', () => {
+    void chrome.runtime.sendMessage({ type: 'rules:get' }).then(async (active) => {
+      const url = buildReportUrl({ pageUrl: tab!.url!, extVersion: state.version, rulesVersion: active.rules.version, repoSlug: REPO_SLUG });
+      await chrome.tabs.create({ url });
+    }).catch(showError);
+  });
   siteSwitch.addEventListener('click', () => {
     void (async () => {
       siteSwitch.disabled = true;
