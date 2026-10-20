@@ -1,0 +1,27 @@
+name: Refresh filter lists
+on:
+  schedule:
+    - cron: '0 22 1 * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build:filters
+      - run: npm run typecheck && npm test && npm run build
+      - uses: peter-evans/create-pull-request@v8
+        with:
+          branch: chore/refresh-filter-lists
+          title: 'chore: refresh filter lists'
+          commit-message: 'chore: refresh filter lists'
+          body: 'Refresh committed DNR rules and cosmetic filters from the documented community lists. Unit tests, typecheck and build passed.'
+          add-paths: filters/
