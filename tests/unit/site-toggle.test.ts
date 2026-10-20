@@ -16,6 +16,12 @@ describe('site toggle', () => {
     expect(await chrome.declarativeNetRequest.getDynamicRules()).toEqual([]);
     expect((await getSettings()).disabledSites).toEqual([]);
   });
+  it('keeps both sites when two are turned off at the same time', async () => {
+    await Promise.all([setSiteEnabled('a.com', false), setSiteEnabled('b.com', false)]);
+    expect((await getSettings()).disabledSites.sort()).toEqual(['a.com', 'b.com']);
+    expect((await chrome.declarativeNetRequest.getDynamicRules()).flatMap((rule) => rule.condition.requestDomains).sort())
+      .toEqual(['a.com', 'b.com']);
+  });
   it('rejects more than 5000 disabled sites', async () => {
     await expect(syncSiteRules(Array.from({ length: 5001 }, (_, i) => `site${i}.com`))).rejects.toThrow('too many disabled sites');
   });

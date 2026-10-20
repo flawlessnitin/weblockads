@@ -5,7 +5,16 @@ export function excludeMatchesFor(sites: string[]): string[] {
   return sites.flatMap((site) => [`*://${site}/*`, `*://*.${site}/*`]);
 }
 
-export async function syncContentScripts(settings: Settings): Promise<void> {
+// Unregister-then-register is not atomic; overlapping syncs (fast toggling)
+// would register the same ids twice, so syncs run one at a time.
+let syncQueue: Promise<void> = Promise.resolve();
+export function syncContentScripts(settings: Settings): Promise<void> {
+  const run = syncQueue.then(() => register(settings));
+  syncQueue = run.catch(() => {});
+  return run;
+}
+
+async function register(settings: Settings): Promise<void> {
   await chrome.scripting.unregisterContentScripts();
   const common = { excludeMatches: excludeMatchesFor(settings.disabledSites), allFrames: true, runAt: 'document_start' as const };
   const scripts: chrome.scripting.RegisteredContentScript[] = [{

@@ -16,7 +16,16 @@ export async function syncSiteRules(disabledSites: string[]): Promise<void> {
   });
 }
 
-export async function setSiteEnabled(site: string, enabled: boolean): Promise<void> {
+// Each change reads and rewrites the whole list, so changes run one at a time
+// to avoid losing a site when two are toggled together.
+let toggleQueue: Promise<void> = Promise.resolve();
+export function setSiteEnabled(site: string, enabled: boolean): Promise<void> {
+  const run = toggleQueue.then(() => applySiteEnabled(site, enabled));
+  toggleQueue = run.catch(() => {});
+  return run;
+}
+
+async function applySiteEnabled(site: string, enabled: boolean): Promise<void> {
   const settings = await getSettings();
   const disabledSites = enabled ? settings.disabledSites.filter((entry) => entry !== site)
     : [...new Set([...settings.disabledSites, site])];

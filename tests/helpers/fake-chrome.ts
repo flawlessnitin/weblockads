@@ -49,7 +49,11 @@ export function installFakeChrome() {
       }),
     },
     scripting: {
-      registerContentScripts: vi.fn(async (scripts: chrome.scripting.RegisteredContentScript[]) => { registered.push(...structuredClone(scripts)); }),
+      registerContentScripts: vi.fn(async (scripts: chrome.scripting.RegisteredContentScript[]) => {
+        const duplicate = scripts.find((script) => registered.some((existing) => existing.id === script.id));
+        if (duplicate) throw new Error(`Duplicate script ID '${duplicate.id}'`);
+        registered.push(...structuredClone(scripts));
+      }),
       getRegisteredContentScripts: vi.fn(async () => structuredClone(registered)),
       unregisterContentScripts: vi.fn(async (filter?: { ids?: string[] }) => {
         registered = filter?.ids ? registered.filter((script) => !filter.ids!.includes(script.id)) : [];
