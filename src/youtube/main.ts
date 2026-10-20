@@ -3,6 +3,7 @@ import { validateRules } from '../rules/schema';
 import { AVERAGE_AD_SECONDS } from '../shared/config';
 import { RULES_EVENT, STATS_EVENT, type YoutubeRulesPayload, type YoutubeStatsPayload } from './events';
 import { installPlayerHooks } from './player-hooks';
+import { startFallback } from './fallback';
 
 let activeRules: YoutubeRulesPayload = bundled.youtube;
 document.addEventListener(RULES_EVENT, (event) => {
@@ -20,4 +21,7 @@ function report(adBreaks: number): void {
   document.dispatchEvent(new CustomEvent(STATS_EVENT, { detail: JSON.stringify(payload) }));
 }
 installPlayerHooks(window, () => activeRules, report);
-// The fallback is wired in Task 9.
+startFallback(document, () => activeRules, (seconds) => {
+  const payload: YoutubeStatsPayload = { count: 1, seconds };
+  document.dispatchEvent(new CustomEvent(STATS_EVENT, { detail: JSON.stringify(payload) }));
+});
