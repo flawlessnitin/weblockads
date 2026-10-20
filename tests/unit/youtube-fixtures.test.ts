@@ -22,7 +22,7 @@ for (const file of files) {
       const json: unknown = JSON.parse(readFileSync(join(directory, file), 'utf8'));
       pruneByPaths(json, bundled.youtube.prunePaths);
       const serialized = JSON.stringify(json);
-      for (const key of ['adPlacements', 'playerAds', 'adSlots']) expect(serialized).not.toContain(`"${key}"`);
+      for (const key of ['adPlacements', 'playerAds', 'adSlots']) expect(serialized.includes(`"${key}"`), `surviving ad key: ${key}`).toBe(false);
     });
     it('keeps playback fields intact', () => {
       const json: unknown = JSON.parse(readFileSync(join(directory, file), 'utf8'));

@@ -1,8 +1,8 @@
 {
-  "version": 1,
+  "version": 2,
   "youtube": {
-    "prunePaths": ["adPlacements", "playerAds", "adSlots", "adBreakHeartbeatParams", "playerResponse.adPlacements", "playerResponse.playerAds", "playerResponse.adSlots", "playerResponse.adBreakHeartbeatParams", "*.playerResponse.adPlacements", "*.playerResponse.playerAds"],
-    "responseUrlIncludes": ["/youtubei/v1/player", "/youtubei/v1/next", "/youtubei/v1/browse", "/youtubei/v1/search", "/youtubei/v1/reel"],
+    "prunePaths": ["adPlacements", "playerAds", "adSlots", "adBreakHeartbeatParams", "playerResponse.adPlacements", "playerResponse.playerAds", "playerResponse.adSlots", "playerResponse.adBreakHeartbeatParams", "*.playerResponse.adPlacements", "*.playerResponse.playerAds", "*.playerResponse.adSlots", "*.playerResponse.adBreakHeartbeatParams"],
+    "responseUrlIncludes": ["/youtubei/v1/player", "/youtubei/v1/get_watch", "/youtubei/v1/next", "/youtubei/v1/browse", "/youtubei/v1/search", "/youtubei/v1/reel"],
     "hideSelectors": ["#masthead-ad", "ytd-ad-slot-renderer", "ytd-in-feed-ad-layout-renderer", "ytd-promoted-sparkles-web-renderer", "ytd-rich-item-renderer:has(ytd-ad-slot-renderer)", "ytd-player-legacy-desktop-watch-ads-renderer", "ytd-engagement-panel-section-list-renderer[target-id=\"engagement-panel-ads\"]", "ytd-enforcement-message-view-model", "tp-yt-paper-dialog:has(ytd-enforcement-message-view-model)", ".ytp-ad-module"],
     "adShowingSelector": ".html5-video-player.ad-showing",
     "skipButtonSelectors": [".ytp-skip-ad-button", ".ytp-ad-skip-button-modern", ".ytp-ad-skip-button"],

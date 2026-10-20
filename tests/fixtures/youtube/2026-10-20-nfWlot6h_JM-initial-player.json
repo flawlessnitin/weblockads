@@ -4,7 +4,7 @@
     "mainAppWebResponseContext": {
       "loggedOut": true
     },
-    "responseId": "IhMIpriE-ZLJlwMVDphjBh3u_Atp",
+    "responseId": "IhMI8fX4qJnJlwMVMWSdCR2UlQ_v",
     "webResponseContextExtensionData": {
       "webResponseContextPreloadData": {
         "preloadMessageNames": [
@@ -649,7 +649,7 @@
         "qualityOrdinal": "QUALITY_ORDINAL_UNKNOWN"
       }
     ],
-    "serverAbrStreamingUrl": "https://rr1---sn-qxaelnlz.googlevideo.com/videoplayback?expire=%5Bredacted%5D&ei=%5Bredacted%5D&ip=%5Bredacted%5D&id=%5Bredacted%5D&source=%5Bredacted%5D&requiressl=%5Bredacted%5D&xpc=%5Bredacted%5D&cps=%5Bredacted%5D&met=%5Bredacted%5D&mh=%5Bredacted%5D&mm=%5Bredacted%5D&mn=%5Bredacted%5D&ms=%5Bredacted%5D&mv=%5Bredacted%5D&mvi=%5Bredacted%5D&pl=%5Bredacted%5D&rms=%5Bredacted%5D&initcwndbps=%5Bredacted%5D&spc=%5Bredacted%5D&svpuc=%5Bredacted%5D&ns=%5Bredacted%5D&sabr=%5Bredacted%5D&rqh=%5Bredacted%5D&mt=%5Bredacted%5D&fvip=%5Bredacted%5D&keepalive=%5Bredacted%5D&fexp=%5Bredacted%5D&c=%5Bredacted%5D&n=%5Bredacted%5D&sparams=%5Bredacted%5D&sig=%5Bredacted%5D&lsparams=%5Bredacted%5D&lsig=%5Bredacted%5D"
+    "serverAbrStreamingUrl": "https://rr1---sn-qxaelnlz.googlevideo.com/videoplayback?expire=%5Bredacted%5D&ei=%5Bredacted%5D&ip=%5Bredacted%5D&id=%5Bredacted%5D&source=%5Bredacted%5D&requiressl=%5Bredacted%5D&xpc=%5Bredacted%5D&cps=%5Bredacted%5D&met=%5Bredacted%5D&mh=%5Bredacted%5D&mm=%5Bredacted%5D&mn=%5Bredacted%5D&ms=%5Bredacted%5D&mv=%5Bredacted%5D&mvi=%5Bredacted%5D&pl=%5Bredacted%5D&rms=%5Bredacted%5D&initcwndbps=%5Bredacted%5D&spc=%5Bredacted%5D&svpuc=%5Bredacted%5D&ns=%5Bredacted%5D&sabr=%5Bredacted%5D&rqh=%5Bredacted%5D&mt=%5Bredacted%5D&fvip=%5Bredacted%5D&epbp=%5Bredacted%5D&keepalive=%5Bredacted%5D&fexp=%5Bredacted%5D&c=%5Bredacted%5D&n=%5Bredacted%5D&sparams=%5Bredacted%5D&sig=%5Bredacted%5D&lsparams=%5Bredacted%5D&lsig=%5Bredacted%5D"
   },
   "videoDetails": {
     "videoId": "nfWlot6h_JM",
@@ -714,7 +714,7 @@
       ]
     },
     "allowRatings": true,
-    "viewCount": "3741828415",
+    "viewCount": "3741840281",
     "author": "Taylor Swift",
     "isPrivate": false,
     "isUnpluggedCorpus": false,
@@ -782,7 +782,7 @@
       }
     },
     "streamSelectionConfig": {
-      "maxBitrate": "13583000"
+      "maxBitrate": "13334000"
     },
     "playerControlsConfig": {
       "showCachedInTimebar": true
@@ -797,7 +797,7 @@
         "readAheadGrowthRateMs": 1000
       },
       "mediaUstreamerRequestConfig": {
-        "videoPlaybackUstreamerConfig": "CuAHCtoECAAlAACAPy0zM3M_NT0Klz9yBAoAGACgAQGoAQC4AgHaAn0QsOoBGIDd2wEgoJwBKKCcAXCIJ4AB9APgAQOYAgzQAgLoAgSAAwKIA4gnqAMDwAMByAMBgAQB0AQB2AQB-AQHgAV9wAUByAUB4AXQD_gF0A-QBgHQBgHwBgGAB9APgAgBiAgBnQjNzEw-oAjoB-AIAegI____________AfoCRagB0IYDhQKamRk_jQIAAIA_wALfA_0CzczMPZADAZ0DCtcjPdUEAAAgQbUGvTeGNb0GMzODQMgHAeUHAIAJRPAHAYAIAagDAbADA9ADAdgDAcoEHAoTCMCpBxCYdRjoByUAAAAAKAAwABDg1AMY0A_SBA8KCAiwCRCwCSABIIgnKAHaBA0KBgjwLhDwLiDwLigBmAYBqAaAgALSBhQI6AcQZBoNCIgnFQAAAD8dzcxMP9gGAbgHAaAIAdIIBggBEAEYAakJmpmZmZn5WECxCZqZmZmZ-VhA0AkB2gkkeFR6RThyeS94R3dlQ1NOcDFWSllLSUNnVm16SjlFWGZDeFpMoAsB6gsEiwaMBoAMAagMkAHgDQHIDwHQDwGYEAHoEAGQEQGgEQHQEgHgEgGAEwGwEwHYEwDoEwGIFACRFJqZmZmZmek_mRQAAAAAAADwv8oUEXYyMDI1MDkyMl8xMjI2LjAw2BSIJ-IUMAoAEixDQU1TSFJVY3VMYkpESlVDbkE3NUZYS2tCcWZ5RDdvUEJNRUd5UTdjQktNQ4EVAAAAAAAA8L-YFQGoFQG4FQHIFQGIp6HKCwEyDAiJARCGwIey7MGXAzIMCPgBELqkrvjpwZcDMgwIjwMQlcGEt-HClwMyDAiIARDb0tyD6sGXAzIMCPcBENLo_-HtwZcDMgwIjgMQhpX2srLClwMyDAiHARCbtsCU8MGXAzIMCPQBEMiG57vqwZcDMgwIjQMQ1-Wv9OvBlwMyDAiGARCUn-G96cGXAzIMCPMBEKP-0cfqwZcDMgwIjAMQ9Y_778bClwMyDAiFARC35OTz6cGXAzIMCPIBEPmP1e3qwZcDMgwIiwMQ9sXXk-3BlwMyDAigARDIk8O57cGXAzIMCJYCEOf4yZPtwZcDMgwIigMQ8IHBku7BlwMyDAiMARC2o-Gk7MCXAzIMCPkBEKqu3LzswJcDMgwI-gEQysTEwezAlwMyDAj7ARCniti-7MCXAzoAUi4aBWVuLVVTKAEyGFVDcUVDYUo4R2Fnbm43WUNiUEV6V0g2Z0AAWABgAHgAiAEBoAEBsAEFugEDBAUxwgEIAQIDBAUIKjDQAQCAAgASTACi3vtNMEUCIQCQVlmflHeqF6zZSBRvIysW60Cz2EVxCjtQsXCb9Bo8ywIgYwyL-ki7HgNkSJeikvi080JRR9apj1OHnrRoP5im7y4aAmVp"
+        "videoPlaybackUstreamerConfig": "CuQHCt4ECAAlAACAPy0zM3M_NT0Klz9yBAoAGACgAQGoAQC4AgHaAn0QsOoBGIDd2wEgoJwBKKCcAXCIJ4AB9APgAQOYAgzQAgLoAgSAAwKIA4gnqAMDwAMByAMBgAQB0AQB2AQB-AQHgAV9wAUByAUB4AXQD_gF0A-QBgHQBgHwBgGAB9APgAgBiAgBnQjNzEw-oAjoB-AIAegI____________AfoCRagB0IYDhQKamRk_jQIAAIA_wALfA_0CzczMPZADAZ0DCtcjPdUEAAAgQbUGvTeGNb0GMzODQMgHAeUHAIAJRPAHAYAIAagDAbADA9ADAdgDAcoEHAoTCMCpBxCYdRjoByUAAAAAKAAwABDg1AMY0A_SBA8KCAiwCRCwCSABIIgnKAHaBA0KBgjwLhDwLiDwLigBmAYBqAaAgALSBhQI6AcQZBoNCIgnFQAAAD8dzcxMP9gGAbgHAaAIAdIIBggBEAEYAakJAAAAAAAA8L-xCQAAAAAAAPC_0AkB2gkkQzFpUzRNVk5ub0VmZmN4dTcxdEtNQWVhYy81TUFnMUg1LzhmoAsB6gsEiwaMBoAMAagMkAHgDQHIDwHQDwGYEAHoEAGQEQGgEQHQEgHgEgGAEwGwEwHYEwDoEwGIFACRFAAAAAAAAPC_mRQAAAAAAADwv8oUEXYyMDI1MDkyMl8xMjI2LjAw2BSIJ-IUNAoAEjBDQU1TSHhVYXViYkpESlFDbkE3NUZYS2pCcGp5RDdvUEJBYkZCZ1hXRHRBRW5RST2BFQAAAAAAAPC_mBUBqBUBuBUByBUBiKehygsBMgwIiQEQhsCHsuzBlwMyDAj4ARC6pK746cGXAzIMCI8DEJXBhLfhwpcDMgwIiAEQ29Lcg-rBlwMyDAj3ARDS6P_h7cGXAzIMCI4DEIaV9rKywpcDMgwIhwEQm7bAlPDBlwMyDAj0ARDIhue76sGXAzIMCI0DENflr_TrwZcDMgwIhgEQlJ_hvenBlwMyDAjzARCj_tHH6sGXAzIMCIwDEPWP--_GwpcDMgwIhQEQt-Tk8-nBlwMyDAjyARD5j9Xt6sGXAzIMCIsDEPbF15PtwZcDMgwIoAEQyJPDue3BlwMyDAiWAhDn-MmT7cGXAzIMCIoDEPCBwZLuwZcDMgwIjAEQtqPhpOzAlwMyDAj5ARCqrty87MCXAzIMCPoBEMrExMHswJcDMgwI-wEQp4rYvuzAlwM6AFIuGgVlbi1VUygBMhhVQ3FFQ2FKOEdhZ25uN1lDYlBFeldINmdAAFgAYAB4AIgBAaABAbABBboBAwQFMcIBCAECAwQFCCow0AEAgAIAEksAot77TTBEAiA0VvcExg9CeUOb2w0x-sFSeB4kzlapYL4IpM8IOXJcpQIgf6TDLI3_EeUXrLQX-CH9VlCHL38fIUN642AznppkIVkaAmVp"
       },
       "useServerDrivenAbr": true,
       "serverPlaybackStartConfig": {
@@ -1175,14 +1175,14 @@
       ],
       "isUnlisted": false,
       "hasYpcMetadata": false,
-      "viewCount": "3741828415",
+      "viewCount": "3741840281",
       "category": "Music",
       "publishDate": "2014-08-18T14:18:00-07:00",
       "ownerChannelName": "Taylor Swift",
       "uploadDate": "2014-08-18T14:18:00-07:00",
       "isShortsEligible": false,
       "externalVideoId": "nfWlot6h_JM",
-      "likeCount": "14384282",
+      "likeCount": "14384313",
       "canonicalUrl": "https://www.youtube.com/watch?v=%5Bredacted%5D"
     }
   },
@@ -1246,7 +1246,7 @@
           {
             "runs": [
               {
-                "text": "Music lovers, we dedicate this to you – the YouTube Music web player"
+                "text": "Our desktop experience was built to be your music destination. Listen to official albums & more."
               }
             ]
           }
@@ -1349,7 +1349,7 @@
         "messageTitle": {
           "runs": [
             {
-              "text": "Into music? We are too."
+              "text": "Where music meets your desktop"
             }
           ]
         },
@@ -1422,7 +1422,7 @@
               "simpleText": "Taylor Swift - The Fate of Ophelia (Official Music Video)"
             },
             "metadata": {
-              "simpleText": "552,768,056 views"
+              "simpleText": "552,809,667 views"
             },
             "endpoint": {
               "commandMetadata": {
@@ -1448,7 +1448,7 @@
                 "watchEndpointSupportedOnesieConfig": {
                   "html5PlaybackOnesieConfig": {
                     "commonConfig": {
-                      "url": "https://rr3---sn-qxaelnez.googlevideo.com/initplayback?source=%5Bredacted%5D&oeis=%5Bredacted%5D&c=%5Bredacted%5D&oad=%5Bredacted%5D&ovd=%5Bredacted%5D&oaad=%5Bredacted%5D&oavd=%5Bredacted%5D&ocs=%5Bredacted%5D&oewis=%5Bredacted%5D&oputc=%5Bredacted%5D&msp=%5Bredacted%5D&odepv=%5Bredacted%5D&id=%5Bredacted%5D&ip=%5Bredacted%5D&initcwndbps=%5Bredacted%5D&mt=%5Bredacted%5D&oweuc=%5Bredacted%5D"
+                      "url": "https://rr3---sn-qxaelnez.googlevideo.com/initplayback?source=%5Bredacted%5D&oeis=%5Bredacted%5D&c=%5Bredacted%5D&oad=%5Bredacted%5D&ovd=%5Bredacted%5D&oaad=%5Bredacted%5D&oavd=%5Bredacted%5D&ocs=%5Bredacted%5D&oewis=%5Bredacted%5D&oputc=%5Bredacted%5D&epbp=%5Bredacted%5D&msp=%5Bredacted%5D&odepv=%5Bredacted%5D&id=%5Bredacted%5D&ip=%5Bredacted%5D&initcwndbps=%5Bredacted%5D&mt=%5Bredacted%5D&oweuc=%5Bredacted%5D"
                     }
                   }
                 }
@@ -1541,7 +1541,7 @@
                 "watchEndpointSupportedOnesieConfig": {
                   "html5PlaybackOnesieConfig": {
                     "commonConfig": {
-                      "url": "https://rr4---sn-qxaelnll.googlevideo.com/initplayback?source=%5Bredacted%5D&oeis=%5Bredacted%5D&c=%5Bredacted%5D&oad=%5Bredacted%5D&ovd=%5Bredacted%5D&oaad=%5Bredacted%5D&oavd=%5Bredacted%5D&ocs=%5Bredacted%5D&oewis=%5Bredacted%5D&oputc=%5Bredacted%5D&msp=%5Bredacted%5D&odepv=%5Bredacted%5D&id=%5Bredacted%5D&ip=%5Bredacted%5D&initcwndbps=%5Bredacted%5D&mt=%5Bredacted%5D&oweuc=%5Bredacted%5D"
+                      "url": "https://rr4---sn-qxaelnll.googlevideo.com/initplayback?source=%5Bredacted%5D&oeis=%5Bredacted%5D&c=%5Bredacted%5D&oad=%5Bredacted%5D&ovd=%5Bredacted%5D&oaad=%5Bredacted%5D&oavd=%5Bredacted%5D&ocs=%5Bredacted%5D&oewis=%5Bredacted%5D&oputc=%5Bredacted%5D&epbp=%5Bredacted%5D&msp=%5Bredacted%5D&odepv=%5Bredacted%5D&id=%5Bredacted%5D&ip=%5Bredacted%5D&initcwndbps=%5Bredacted%5D&mt=%5Bredacted%5D&oweuc=%5Bredacted%5D"
                     }
                   }
                 }
@@ -1625,8 +1625,8 @@
     "entityBatchUpdate": {
       "mutations": [],
       "timestamp": {
-        "seconds": "1792518276",
-        "nanos": 633589927
+        "seconds": "1792519987",
+        "nanos": 725359282
       }
     }
   }

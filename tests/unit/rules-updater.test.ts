@@ -1,11 +1,14 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import bundled from '../../rules/rules.json';
+import bundledSource from '../../rules/rules.json';
 import { BUILD_TIME } from '../../src/shared/config';
 import { getStoredRules, saveStoredRules } from '../../src/shared/storage';
 import { checkForUpdate, getActiveRules } from '../../src/rules/updater';
 import { installFakeChrome } from '../helpers/fake-chrome';
 
 const remote = (value: unknown) => vi.fn(async () => new Response(JSON.stringify(value)));
+// Pin the simulated bundle at v1 so the plan's v1 -> v2 test remains valid
+// when the real bundled rules advance during live YouTube maintenance.
+const bundled = { ...bundledSource, version: 1 };
 
 describe('rules updater', () => {
   beforeEach(() => {

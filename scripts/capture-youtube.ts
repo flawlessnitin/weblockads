@@ -90,6 +90,7 @@ try {
     }
     page.on('response', (response) => {
       const kind = response.url().includes('/youtubei/v1/player') ? 'player'
+        : response.url().includes('/youtubei/v1/get_watch') ? 'get-watch'
         : response.url().includes('/youtubei/v1/next') ? 'next' : null;
       if (!kind || !response.ok()) return;
       const operation = response.json().then((body: unknown) => save(kind, body))
@@ -109,6 +110,20 @@ try {
       const botCheck = await page.locator('body').innerText().then((text) => /confirm you.?re not a bot|sign in to confirm/i.test(text));
       console.log(`${videoId}: botCheck=${botCheck}, initialPlayer=${Boolean(initial.player)}`);
       if (botCheck) failures.push(`${videoId}: bot check`);
+      // A real related-video click captures SPA responses that a fresh watch
+      // page may never request (including the current get_watch endpoint).
+      if (!botCheck) {
+        const links = page.locator('#related a[href^="/watch?v="]');
+        for (let i = 0; i < await links.count(); i++) {
+          if (await links.nth(i).isVisible()) {
+            await links.nth(i).click();
+            await page.waitForURL((url) => url.searchParams.get('v') !== videoId, { timeout: 20_000 });
+            await page.waitForTimeout(15_000);
+            console.log(`${videoId}: captured a related-video SPA navigation`);
+            break;
+          }
+        }
+      }
     } catch (error) {
       failures.push(`${videoId}: ${error instanceof Error ? error.message.split('\n')[0] : 'capture failed'}`);
     } finally {
