@@ -2,7 +2,7 @@ import { access, copyFile, cp, mkdir, readFile, readdir, rm, writeFile } from 'n
 import { resolve } from 'node:path';
 import { build } from 'esbuild';
 import { buildManifest } from '../src/manifest';
-import { PRODUCT_NAME } from '../src/shared/config';
+import { DEFAULT_REPO_SLUG, PRODUCT_NAME } from '../src/shared/config';
 
 async function exists(path: string): Promise<boolean> {
   try { await access(path); return true; } catch { return false; }
@@ -14,7 +14,7 @@ await rm(outdir, { recursive: true, force: true });
 await mkdir(outdir, { recursive: true });
 const define = {
   __BUILD_TIME__: String(Date.now()),
-  'process.env.ADSHIELD_REPO': JSON.stringify(process.env.ADSHIELD_REPO ?? 'OWNER/adshield'),
+  'process.env.ADSHIELD_REPO': JSON.stringify(process.env.ADSHIELD_REPO ?? DEFAULT_REPO_SLUG),
 };
 const entries = [
   ['background/index', 'background', 'esm'],

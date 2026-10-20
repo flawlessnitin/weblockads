@@ -29,7 +29,7 @@ npm.cmd run build
 npm.cmd run package
 ```
 
-The default `OWNER/adshield` URL is a placeholder. Until the owner publishes `rules/rules.json` on that repository's `main` branch, bundled rules work but online updates and repository links do not. Creating/pushing a repository and publishing a store listing are owner actions.
+Rule updates and repository links default to `flawlessnitin/weblockads`; set `ADSHIELD_REPO=<owner>/<repo>` at build time to point a fork at its own repository. Online rule updates read `rules/rules.json` from that repository's `main` branch; until it exists there, the bundled rules are used.
 
 ## Development commands
 

@@ -1,7 +1,8 @@
 declare const __BUILD_TIME__: number;
 
 export const PRODUCT_NAME = 'weblockads';
-export const REPO_SLUG: string = process.env.ADSHIELD_REPO ?? 'OWNER/adshield';
+export const DEFAULT_REPO_SLUG = 'flawlessnitin/weblockads';
+export const REPO_SLUG: string = process.env.ADSHIELD_REPO ?? DEFAULT_REPO_SLUG;
 export const RULES_URL = `https://raw.githubusercontent.com/${REPO_SLUG}/main/rules/rules.json`;
 export const YOUTUBE_MATCHES = [
   '*://www.youtube.com/*',
