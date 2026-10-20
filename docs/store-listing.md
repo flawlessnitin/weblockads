@@ -12,7 +12,7 @@ The plan's full-product wording, "Blocks ads, trackers and ad pop-ups on website
 
 Block website ads and trackers using bundled community filter lists. Remove YouTube player ad data and hide feed and masthead ad elements. A fallback mutes, speeds up and skips detected video ads when possible, then restores your volume and playback speed.
 
-Turn blocking off for an individual site, permanently hide an unwanted element, and see local blocking estimates. Rules update as validated JSON from the owner's GitHub repository; there is no remotely loaded code. No analytics or automatic browsing-data uploads. A user-selected Report site link opens an editable GitHub form with the page URL and version details.
+Turn blocking off for an individual site, permanently hide an unwanted element, and see local blocking estimates. Rules update as validated JSON from the owner's GitHub repository; there is no remotely loaded code. No analytics or automatic browsing-data uploads. A user-selected Report site link opens an editable GitHub form with the page address (query strings removed) and version details.
 
 Chrome desktop only. V1 includes regular YouTube, Shorts and supported embeds. It does not include Hotstar or dedicated pop-up/pop-under protection. Some ads, particularly server-stitched ads, may still get through; do not promise universal blocking. Per-tab and all-time counts and skipped time are estimates. The Pop-ups counter stays at zero until the later feature ships.
 

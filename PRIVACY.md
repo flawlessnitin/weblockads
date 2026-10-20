@@ -14,7 +14,7 @@ Community ad-filter lists and the cosmetic engine are bundled with the extension
 
 ## Links you choose to open
 
-**Report site** opens an editable GitHub issue form containing the current page URL, extension version and rules version. This information is included in the URL sent to GitHub when you choose that action. Review the form and remove private information before submitting. The extension never submits an issue automatically. License and attribution links also open external sites only when selected. GitHub's and those sites' own privacy policies apply to visits you choose to make.
+**Report site** opens an editable GitHub issue form containing the current page address with its query string and fragment removed (on YouTube only the video id is kept), plus the extension and rules versions. This information is included in the URL sent to GitHub when you choose that action. Review the form and remove private information before submitting. The extension never submits an issue automatically. License and attribution links also open external sites only when selected. GitHub's and those sites' own privacy policies apply to visits you choose to make.
 
 The permission to access all websites is used to block requests and hide ads, not to send website data to the developer. `webRequest` observes blocked-request errors to estimate counts; request contents are not logged or uploaded. YouTube processing reads player data locally to remove ad information. No Google sign-in credentials are requested by the extension.
 
