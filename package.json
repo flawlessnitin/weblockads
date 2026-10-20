@@ -1,0 +1,34 @@
+{
+  "name": "browser-ad-blocker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "engines": { "node": ">=24" },
+  "scripts": {
+    "build": "tsx scripts/build.ts",
+    "build:filters": "tsx scripts/build-filters.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "e2e": "playwright test",
+    "package": "tsx scripts/package.ts",
+    "icons": "tsx scripts/make-icons.ts"
+  },
+  "dependencies": {
+    "@ghostery/adblocker": "~2.20.0",
+    "@ghostery/adblocker-webextension-cosmetics": "~2.20.0",
+    "tldts": "^7.0.0"
+  },
+  "devDependencies": {
+    "@ghostery/urlfilter2dnr": "~2.1.0",
+    "@playwright/test": "~1.64.0",
+    "@resvg/resvg-js": "~2.6.0",
+    "@types/chrome": "^0.1.0",
+    "@types/node": "^24.0.0",
+    "esbuild": "~0.28.0",
+    "jsdom": "^30.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "~7.0.0",
+    "vitest": "^5.0.0"
+  }
+}
