@@ -1,0 +1,1633 @@
+{
+  "responseContext": {
+    "maxAgeSeconds": 0,
+    "mainAppWebResponseContext": {
+      "loggedOut": true
+    },
+    "responseId": "IhMI8fX4qJnJlwMVMWSdCR2UlQ_v",
+    "webResponseContextExtensionData": {
+      "webResponseContextPreloadData": {
+        "preloadMessageNames": [
+          "miniplayerRenderer",
+          "offlineabilityRenderer",
+          "dismissableDialogRenderer",
+          "adPlacementRenderer",
+          "clientForecastingAdRenderer",
+          "playerStoryboardSpecRenderer",
+          "playerMicroformatRenderer",
+          "cardCollectionRenderer",
+          "cardRenderer",
+          "simpleCardTeaserRenderer",
+          "infoCardIconRenderer",
+          "mealbarPromoRenderer",
+          "buttonRenderer",
+          "endscreenRenderer",
+          "endscreenElementRenderer",
+          "thumbnailOverlayTimeStatusRenderer",
+          "toggleButtonViewModel",
+          "buttonViewModel"
+        ]
+      },
+      "hasDecorated": true
+    }
+  },
+  "playabilityStatus": {
+    "status": "OK",
+    "playableInEmbed": true,
+    "offlineability": {
+      "offlineabilityRenderer": {
+        "offlineable": false,
+        "infoRenderer": {
+          "dismissableDialogRenderer": {
+            "dialogMessage": "Sorry, this video can't be taken offline.",
+            "title": "Download unavailable"
+          }
+        }
+      }
+    },
+    "miniplayer": {
+      "miniplayerRenderer": {
+        "playbackMode": "PLAYBACK_MODE_ALLOW"
+      }
+    }
+  },
+  "streamingData": {
+    "expiresInSeconds": "21540",
+    "adaptiveFormats": [
+      {
+        "itag": 137,
+        "mimeType": "video/mp4; codecs=\"avc1.640028\"",
+        "bitrate": 4333853,
+        "width": 1920,
+        "height": 1080,
+        "initRange": {
+          "start": "0",
+          "end": "740"
+        },
+        "indexRange": {
+          "start": "741",
+          "end": "1336"
+        },
+        "lastModified": "1792267409022982",
+        "contentLength": "78401666",
+        "quality": "hd1080",
+        "fps": 24,
+        "qualityLabel": "1080p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 2596812,
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_1080P"
+      },
+      {
+        "itag": 248,
+        "mimeType": "video/webm; codecs=\"vp9\"",
+        "bitrate": 2312599,
+        "width": 1920,
+        "height": 1080,
+        "initRange": {
+          "start": "0",
+          "end": "219"
+        },
+        "indexRange": {
+          "start": "220",
+          "end": "1033"
+        },
+        "lastModified": "1792266751152698",
+        "contentLength": "42317128",
+        "quality": "hd1080",
+        "fps": 24,
+        "qualityLabel": "1080p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 1401623,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_1080P"
+      },
+      {
+        "itag": 399,
+        "mimeType": "video/mp4; codecs=\"av01.0.08M.08\"",
+        "bitrate": 2287810,
+        "width": 1920,
+        "height": 1080,
+        "initRange": {
+          "start": "0",
+          "end": "699"
+        },
+        "indexRange": {
+          "start": "700",
+          "end": "1295"
+        },
+        "lastModified": "1792298826408085",
+        "contentLength": "39079764",
+        "quality": "hd1080",
+        "fps": 24,
+        "qualityLabel": "1080p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 1294396,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_1080P"
+      },
+      {
+        "itag": 136,
+        "mimeType": "video/mp4; codecs=\"avc1.4D401F\"",
+        "bitrate": 1407172,
+        "width": 1280,
+        "height": 720,
+        "initRange": {
+          "start": "0",
+          "end": "738"
+        },
+        "indexRange": {
+          "start": "739",
+          "end": "1334"
+        },
+        "lastModified": "1792266774980955",
+        "contentLength": "29011220",
+        "quality": "hd720",
+        "fps": 24,
+        "qualityLabel": "720p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 960906,
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_720P"
+      },
+      {
+        "itag": 247,
+        "mimeType": "video/webm; codecs=\"vp9\"",
+        "bitrate": 1446159,
+        "width": 1280,
+        "height": 720,
+        "initRange": {
+          "start": "0",
+          "end": "219"
+        },
+        "indexRange": {
+          "start": "220",
+          "end": "1024"
+        },
+        "lastModified": "1792267777995858",
+        "contentLength": "27187417",
+        "quality": "hd720",
+        "fps": 24,
+        "qualityLabel": "720p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 900499,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_720P"
+      },
+      {
+        "itag": 398,
+        "mimeType": "video/mp4; codecs=\"av01.0.05M.08\"",
+        "bitrate": 1233078,
+        "width": 1280,
+        "height": 720,
+        "initRange": {
+          "start": "0",
+          "end": "699"
+        },
+        "indexRange": {
+          "start": "700",
+          "end": "1295"
+        },
+        "lastModified": "1792286201318022",
+        "contentLength": "21677708",
+        "quality": "hd720",
+        "fps": 24,
+        "qualityLabel": "720p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 718006,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_720P"
+      },
+      {
+        "itag": 135,
+        "mimeType": "video/mp4; codecs=\"avc1.4D401E\"",
+        "bitrate": 984373,
+        "width": 854,
+        "height": 480,
+        "initRange": {
+          "start": "0",
+          "end": "738"
+        },
+        "indexRange": {
+          "start": "739",
+          "end": "1334"
+        },
+        "lastModified": "1792268420782875",
+        "contentLength": "16042081",
+        "quality": "large",
+        "fps": 24,
+        "qualityLabel": "480p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 531344,
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_480P"
+      },
+      {
+        "itag": 244,
+        "mimeType": "video/webm; codecs=\"vp9\"",
+        "bitrate": 697588,
+        "width": 854,
+        "height": 480,
+        "initRange": {
+          "start": "0",
+          "end": "219"
+        },
+        "indexRange": {
+          "start": "220",
+          "end": "1008"
+        },
+        "lastModified": "1792266892591944",
+        "contentLength": "14572967",
+        "quality": "large",
+        "fps": 24,
+        "qualityLabel": "480p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 482684,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_480P"
+      },
+      {
+        "itag": 397,
+        "mimeType": "video/mp4; codecs=\"av01.0.04M.08\"",
+        "bitrate": 604584,
+        "width": 854,
+        "height": 480,
+        "initRange": {
+          "start": "0",
+          "end": "699"
+        },
+        "indexRange": {
+          "start": "700",
+          "end": "1295"
+        },
+        "lastModified": "1792267279659735",
+        "contentLength": "12547584",
+        "quality": "large",
+        "fps": 24,
+        "qualityLabel": "480p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 415599,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_480P"
+      },
+      {
+        "itag": 134,
+        "mimeType": "video/mp4; codecs=\"avc1.4D401E\"",
+        "bitrate": 632704,
+        "width": 640,
+        "height": 360,
+        "initRange": {
+          "start": "0",
+          "end": "738"
+        },
+        "indexRange": {
+          "start": "739",
+          "end": "1334"
+        },
+        "lastModified": "1792266628255636",
+        "contentLength": "9936314",
+        "quality": "medium",
+        "fps": 24,
+        "qualityLabel": "360p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 329109,
+        "highReplication": true,
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_360P"
+      },
+      {
+        "itag": 243,
+        "mimeType": "video/webm; codecs=\"vp9\"",
+        "bitrate": 414495,
+        "width": 640,
+        "height": 360,
+        "initRange": {
+          "start": "0",
+          "end": "219"
+        },
+        "indexRange": {
+          "start": "220",
+          "end": "1008"
+        },
+        "lastModified": "1792266917412643",
+        "contentLength": "9217831",
+        "quality": "medium",
+        "fps": 24,
+        "qualityLabel": "360p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 305312,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_360P"
+      },
+      {
+        "itag": 396,
+        "mimeType": "video/mp4; codecs=\"av01.0.01M.08\"",
+        "bitrate": 323527,
+        "width": 640,
+        "height": 360,
+        "initRange": {
+          "start": "0",
+          "end": "699"
+        },
+        "indexRange": {
+          "start": "700",
+          "end": "1295"
+        },
+        "lastModified": "1792291698034677",
+        "contentLength": "7350318",
+        "quality": "medium",
+        "fps": 24,
+        "qualityLabel": "360p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 243456,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_360P"
+      },
+      {
+        "itag": 133,
+        "mimeType": "video/mp4; codecs=\"avc1.4D4015\"",
+        "bitrate": 244808,
+        "width": 426,
+        "height": 240,
+        "initRange": {
+          "start": "0",
+          "end": "738"
+        },
+        "indexRange": {
+          "start": "739",
+          "end": "1334"
+        },
+        "lastModified": "1792266741559863",
+        "contentLength": "5244905",
+        "quality": "small",
+        "fps": 24,
+        "qualityLabel": "240p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 173721,
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_240P"
+      },
+      {
+        "itag": 242,
+        "mimeType": "video/webm; codecs=\"vp9\"",
+        "bitrate": 184246,
+        "width": 426,
+        "height": 240,
+        "initRange": {
+          "start": "0",
+          "end": "218"
+        },
+        "indexRange": {
+          "start": "219",
+          "end": "1007"
+        },
+        "lastModified": "1792266997155833",
+        "contentLength": "3965584",
+        "quality": "small",
+        "fps": 24,
+        "qualityLabel": "240p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 131347,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_240P"
+      },
+      {
+        "itag": 395,
+        "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+        "bitrate": 148342,
+        "width": 426,
+        "height": 240,
+        "initRange": {
+          "start": "0",
+          "end": "699"
+        },
+        "indexRange": {
+          "start": "700",
+          "end": "1295"
+        },
+        "lastModified": "1792267613758198",
+        "contentLength": "3654657",
+        "quality": "small",
+        "fps": 24,
+        "qualityLabel": "240p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 121049,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_240P"
+      },
+      {
+        "itag": 160,
+        "mimeType": "video/mp4; codecs=\"avc1.4D400C\"",
+        "bitrate": 110919,
+        "width": 256,
+        "height": 144,
+        "initRange": {
+          "start": "0",
+          "end": "737"
+        },
+        "indexRange": {
+          "start": "738",
+          "end": "1333"
+        },
+        "lastModified": "1792267693115848",
+        "contentLength": "2566384",
+        "quality": "tiny",
+        "fps": 24,
+        "qualityLabel": "144p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 85003,
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_144P"
+      },
+      {
+        "itag": 278,
+        "mimeType": "video/webm; codecs=\"vp9\"",
+        "bitrate": 96631,
+        "width": 256,
+        "height": 144,
+        "initRange": {
+          "start": "0",
+          "end": "218"
+        },
+        "indexRange": {
+          "start": "219",
+          "end": "1006"
+        },
+        "lastModified": "1792267613535335",
+        "contentLength": "2220580",
+        "quality": "tiny",
+        "fps": 24,
+        "qualityLabel": "144p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 73549,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_144P"
+      },
+      {
+        "itag": 394,
+        "mimeType": "video/mp4; codecs=\"av01.0.00M.08\"",
+        "bitrate": 91998,
+        "width": 256,
+        "height": 144,
+        "initRange": {
+          "start": "0",
+          "end": "699"
+        },
+        "indexRange": {
+          "start": "700",
+          "end": "1295"
+        },
+        "lastModified": "1792267879727344",
+        "contentLength": "1910719",
+        "quality": "tiny",
+        "fps": 24,
+        "qualityLabel": "144p",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 63286,
+        "colorInfo": {
+          "primaries": "COLOR_PRIMARIES_BT709",
+          "transferCharacteristics": "COLOR_TRANSFER_CHARACTERISTICS_BT709",
+          "matrixCoefficients": "COLOR_MATRIX_COEFFICIENTS_BT709"
+        },
+        "approxDurationMs": "241532",
+        "qualityOrdinal": "QUALITY_ORDINAL_144P"
+      },
+      {
+        "itag": 140,
+        "mimeType": "audio/mp4; codecs=\"mp4a.40.2\"",
+        "bitrate": 130517,
+        "initRange": {
+          "start": "0",
+          "end": "722"
+        },
+        "indexRange": {
+          "start": "723",
+          "end": "1054"
+        },
+        "lastModified": "1792233021395382",
+        "contentLength": "3911684",
+        "quality": "tiny",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 129499,
+        "highReplication": true,
+        "audioQuality": "AUDIO_QUALITY_MEDIUM",
+        "approxDurationMs": "241650",
+        "audioSampleRate": "44100",
+        "audioChannels": 2,
+        "loudnessDb": 5.8699999,
+        "trackAbsoluteLoudnessLkfs": -8.1300001,
+        "qualityOrdinal": "QUALITY_ORDINAL_UNKNOWN"
+      },
+      {
+        "itag": 249,
+        "mimeType": "audio/webm; codecs=\"opus\"",
+        "bitrate": 52595,
+        "initRange": {
+          "start": "0",
+          "end": "265"
+        },
+        "indexRange": {
+          "start": "266",
+          "end": "686"
+        },
+        "lastModified": "1792233071646506",
+        "contentLength": "1449402",
+        "quality": "tiny",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 47993,
+        "audioQuality": "AUDIO_QUALITY_LOW",
+        "approxDurationMs": "241601",
+        "audioSampleRate": "48000",
+        "audioChannels": 2,
+        "loudnessDb": 5.8699999,
+        "trackAbsoluteLoudnessLkfs": -8.1300001,
+        "qualityOrdinal": "QUALITY_ORDINAL_UNKNOWN"
+      },
+      {
+        "itag": 250,
+        "mimeType": "audio/webm; codecs=\"opus\"",
+        "bitrate": 69280,
+        "initRange": {
+          "start": "0",
+          "end": "265"
+        },
+        "indexRange": {
+          "start": "266",
+          "end": "687"
+        },
+        "lastModified": "1792233081741898",
+        "contentLength": "1905310",
+        "quality": "tiny",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 63089,
+        "audioQuality": "AUDIO_QUALITY_LOW",
+        "approxDurationMs": "241601",
+        "audioSampleRate": "48000",
+        "audioChannels": 2,
+        "loudnessDb": 5.8699999,
+        "trackAbsoluteLoudnessLkfs": -8.1300001,
+        "qualityOrdinal": "QUALITY_ORDINAL_UNKNOWN"
+      },
+      {
+        "itag": 251,
+        "mimeType": "audio/webm; codecs=\"opus\"",
+        "bitrate": 136089,
+        "initRange": {
+          "start": "0",
+          "end": "265"
+        },
+        "indexRange": {
+          "start": "266",
+          "end": "687"
+        },
+        "lastModified": "1792233075770663",
+        "contentLength": "3751853",
+        "quality": "tiny",
+        "projectionType": "RECTANGULAR",
+        "averageBitrate": 124233,
+        "audioQuality": "AUDIO_QUALITY_MEDIUM",
+        "approxDurationMs": "241601",
+        "audioSampleRate": "48000",
+        "audioChannels": 2,
+        "loudnessDb": 5.8699999,
+        "trackAbsoluteLoudnessLkfs": -8.1300001,
+        "qualityOrdinal": "QUALITY_ORDINAL_UNKNOWN"
+      }
+    ],
+    "serverAbrStreamingUrl": "https://rr1---sn-qxaelnlz.googlevideo.com/videoplayback?expire=%5Bredacted%5D&ei=%5Bredacted%5D&ip=%5Bredacted%5D&id=%5Bredacted%5D&source=%5Bredacted%5D&requiressl=%5Bredacted%5D&xpc=%5Bredacted%5D&cps=%5Bredacted%5D&met=%5Bredacted%5D&mh=%5Bredacted%5D&mm=%5Bredacted%5D&mn=%5Bredacted%5D&ms=%5Bredacted%5D&mv=%5Bredacted%5D&mvi=%5Bredacted%5D&pl=%5Bredacted%5D&rms=%5Bredacted%5D&initcwndbps=%5Bredacted%5D&spc=%5Bredacted%5D&svpuc=%5Bredacted%5D&ns=%5Bredacted%5D&sabr=%5Bredacted%5D&rqh=%5Bredacted%5D&mt=%5Bredacted%5D&fvip=%5Bredacted%5D&epbp=%5Bredacted%5D&keepalive=%5Bredacted%5D&fexp=%5Bredacted%5D&c=%5Bredacted%5D&n=%5Bredacted%5D&sparams=%5Bredacted%5D&sig=%5Bredacted%5D&lsparams=%5Bredacted%5D&lsig=%5Bredacted%5D"
+  },
+  "videoDetails": {
+    "videoId": "nfWlot6h_JM",
+    "title": "Taylor Swift - Shake It Off",
+    "lengthSeconds": "242",
+    "keywords": [
+      "Taylor",
+      "Swift",
+      "Shake",
+      "Off",
+      "Big",
+      "Machine",
+      "Records",
+      "LLC",
+      "Pop",
+      "한글자막",
+      "日本語字幕",
+      "subtítulos en español",
+      "Türkçe Altyazılı",
+      "Phụ đề tiếng Việt",
+      "Subtitles in Tagalog",
+      "Teks dalam Bahasa Indonesia",
+      "उपशीर्षक हिंदी में",
+      "Sarikata Dalam Bahasa Malaysia",
+      "คำบรรยายภาษาไทย",
+      "テイラー・スウィフト",
+      "테일러 스위프트",
+      "泰勒絲",
+      "泰勒斯威夫特"
+    ],
+    "channelId": "UCqECaJ8Gagnn7YCbPEzWH6g",
+    "isOwnerViewing": false,
+    "shortDescription": "Music video by Taylor Swift performing Shake It Off. (C) 2014 Taylor Swift.\n\nStream/download ‘The Life of a Showgirl’ - https://taylor.lnk.to/TSTheLifeofaShowgirlYD\n\n►Shop Merch: http://taylor.lnk.to/store\n►Subscribe to Taylor Swift on YouTube: https://ts.lnk.to/subscribe\n\n►Follow Taylor Swift Online:\nTikTok: http://tiktok.com/@taylorswift\nInstagram: http://instagram.com/taylorswift\nTwitter: http://twitter.com/taylorswift13\nSnapchat: http://snapchat.com/add/taylorswift\nFacebook: http://facebook.com/taylorswift\nTumblr: http://taylorswift.tumblr.com\nWebsite: http://www.taylorswift.com\n\n►Follow Taylor Nation Online:\nTikTok: http://tiktok.com/@taylornation\nInstagram: http://instagram.com/taylornation\nYouTube: https://youtube.com/taylornation\nTwitter: http://twitter.com/taylornation13\nTumblr: http://taylornation.tumblr.com\n\n#TaylorSwift #ShakeItOff",
+    "isCrawlable": true,
+    "thumbnail": {
+      "thumbnails": [
+        {
+          "url": "https://i.ytimg.com/vi/nfWlot6h_JM/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+          "width": 168,
+          "height": 94
+        },
+        {
+          "url": "https://i.ytimg.com/vi/nfWlot6h_JM/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+          "width": 196,
+          "height": 110
+        },
+        {
+          "url": "https://i.ytimg.com/vi/nfWlot6h_JM/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+          "width": 246,
+          "height": 138
+        },
+        {
+          "url": "https://i.ytimg.com/vi/nfWlot6h_JM/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+          "width": 336,
+          "height": 188
+        },
+        {
+          "url": "https://i.ytimg.com/vi/nfWlot6h_JM/maxresdefault.jpg",
+          "width": 1920,
+          "height": 1080
+        }
+      ]
+    },
+    "allowRatings": true,
+    "viewCount": "3741840281",
+    "author": "Taylor Swift",
+    "isPrivate": false,
+    "isUnpluggedCorpus": false,
+    "isLiveContent": false,
+    "isTvfilmVideo": false
+  },
+  "playerConfig": {
+    "granularVariableSpeedConfig": {
+      "minimumPlaybackRate": 25,
+      "maximumPlaybackRate": 200,
+      "stepSize": 5,
+      "defaultPlaybackRateOptions": [
+        {
+          "label": "1.0",
+          "value": 100,
+          "isPremiumUpsell": false,
+          "priority": 5
+        },
+        {
+          "label": "1.25",
+          "value": 125,
+          "isPremiumUpsell": false,
+          "priority": 2
+        },
+        {
+          "label": "1.5",
+          "value": 150,
+          "isPremiumUpsell": false,
+          "priority": 3
+        },
+        {
+          "label": "1.75",
+          "value": 175,
+          "isPremiumUpsell": false,
+          "priority": 0
+        },
+        {
+          "label": "2.0",
+          "value": 200,
+          "isPremiumUpsell": false,
+          "priority": 4
+        },
+        {
+          "label": "3.0",
+          "value": 300,
+          "isPremiumUpsell": true,
+          "priority": 1
+        }
+      ]
+    },
+    "vssClientConfig": {
+      "vssUsePostRequest": true
+    },
+    "audioConfig": {
+      "loudnessDb": 5.8699999,
+      "perceptualLoudnessDb": -8.1300001,
+      "enablePerFormatLoudness": true,
+      "trackAbsoluteLoudnessLkfs": -8.1300001,
+      "loudnessTargetLkfs": -14,
+      "loudnessNormalizationConfig": {
+        "applyStatefulNormalization": false,
+        "preserveStatefulLoudnessTarget": true,
+        "maxStatefulTimeThresholdSec": 300,
+        "minimumLoudnessTargetLkfs": -31
+      }
+    },
+    "streamSelectionConfig": {
+      "maxBitrate": "13334000"
+    },
+    "playerControlsConfig": {
+      "showCachedInTimebar": true
+    },
+    "daiConfig": {
+      "sendSsdaiMissingAdBreakReasons": true
+    },
+    "mediaCommonConfig": {
+      "dynamicReadaheadConfig": {
+        "maxReadAheadMediaTimeMs": 120000,
+        "minReadAheadMediaTimeMs": 15000,
+        "readAheadGrowthRateMs": 1000
+      },
+      "mediaUstreamerRequestConfig": {
+        "videoPlaybackUstreamerConfig": "CuQHCt4ECAAlAACAPy0zM3M_NT0Klz9yBAoAGACgAQGoAQC4AgHaAn0QsOoBGIDd2wEgoJwBKKCcAXCIJ4AB9APgAQOYAgzQAgLoAgSAAwKIA4gnqAMDwAMByAMBgAQB0AQB2AQB-AQHgAV9wAUByAUB4AXQD_gF0A-QBgHQBgHwBgGAB9APgAgBiAgBnQjNzEw-oAjoB-AIAegI____________AfoCRagB0IYDhQKamRk_jQIAAIA_wALfA_0CzczMPZADAZ0DCtcjPdUEAAAgQbUGvTeGNb0GMzODQMgHAeUHAIAJRPAHAYAIAagDAbADA9ADAdgDAcoEHAoTCMCpBxCYdRjoByUAAAAAKAAwABDg1AMY0A_SBA8KCAiwCRCwCSABIIgnKAHaBA0KBgjwLhDwLiDwLigBmAYBqAaAgALSBhQI6AcQZBoNCIgnFQAAAD8dzcxMP9gGAbgHAaAIAdIIBggBEAEYAakJAAAAAAAA8L-xCQAAAAAAAPC_0AkB2gkkQzFpUzRNVk5ub0VmZmN4dTcxdEtNQWVhYy81TUFnMUg1LzhmoAsB6gsEiwaMBoAMAagMkAHgDQHIDwHQDwGYEAHoEAGQEQGgEQHQEgHgEgGAEwGwEwHYEwDoEwGIFACRFAAAAAAAAPC_mRQAAAAAAADwv8oUEXYyMDI1MDkyMl8xMjI2LjAw2BSIJ-IUNAoAEjBDQU1TSHhVYXViYkpESlFDbkE3NUZYS2pCcGp5RDdvUEJBYkZCZ1hXRHRBRW5RST2BFQAAAAAAAPC_mBUBqBUBuBUByBUBiKehygsBMgwIiQEQhsCHsuzBlwMyDAj4ARC6pK746cGXAzIMCI8DEJXBhLfhwpcDMgwIiAEQ29Lcg-rBlwMyDAj3ARDS6P_h7cGXAzIMCI4DEIaV9rKywpcDMgwIhwEQm7bAlPDBlwMyDAj0ARDIhue76sGXAzIMCI0DENflr_TrwZcDMgwIhgEQlJ_hvenBlwMyDAjzARCj_tHH6sGXAzIMCIwDEPWP--_GwpcDMgwIhQEQt-Tk8-nBlwMyDAjyARD5j9Xt6sGXAzIMCIsDEPbF15PtwZcDMgwIoAEQyJPDue3BlwMyDAiWAhDn-MmT7cGXAzIMCIoDEPCBwZLuwZcDMgwIjAEQtqPhpOzAlwMyDAj5ARCqrty87MCXAzIMCPoBEMrExMHswJcDMgwI-wEQp4rYvuzAlwM6AFIuGgVlbi1VUygBMhhVQ3FFQ2FKOEdhZ25uN1lDYlBFeldINmdAAFgAYAB4AIgBAaABAbABBboBAwQFMcIBCAECAwQFCCow0AEAgAIAEksAot77TTBEAiA0VvcExg9CeUOb2w0x-sFSeB4kzlapYL4IpM8IOXJcpQIgf6TDLI3_EeUXrLQX-CH9VlCHL38fIUN642AznppkIVkaAmVp"
+      },
+      "useServerDrivenAbr": true,
+      "serverPlaybackStartConfig": {
+        "enable": true,
+        "playbackStartPolicy": {
+          "startMinReadaheadPolicy": [
+            {
+              "minReadaheadMs": 1200
+            }
+          ]
+        }
+      },
+      "platypusUseEnvoyNetFetch": false,
+      "fixLivePlaybackModelDefaultPosition": false
+    },
+    "webPlayerConfig": {
+      "useCobaltTvosDash": true,
+      "webPlayerActionsPorting": {
+        "getSharePanelCommand": {
+          "commandMetadata": {
+            "webCommandMetadata": {
+              "sendPost": true,
+              "apiUrl": "/youtubei/v1/share/get_web_player_share_panel"
+            }
+          },
+          "webPlayerShareEntityServiceEndpoint": {}
+        },
+        "subscribeCommand": {
+          "commandMetadata": {
+            "webCommandMetadata": {
+              "sendPost": true,
+              "apiUrl": "/youtubei/v1/subscription/subscribe"
+            }
+          },
+          "subscribeEndpoint": {
+            "channelIds": [
+              "UCqECaJ8Gagnn7YCbPEzWH6g"
+            ]
+          }
+        },
+        "unsubscribeCommand": {
+          "commandMetadata": {
+            "webCommandMetadata": {
+              "sendPost": true,
+              "apiUrl": "/youtubei/v1/subscription/unsubscribe"
+            }
+          },
+          "unsubscribeEndpoint": {
+            "channelIds": [
+              "UCqECaJ8Gagnn7YCbPEzWH6g"
+            ]
+          }
+        },
+        "addToWatchLaterCommand": {
+          "commandMetadata": {
+            "webCommandMetadata": {
+              "sendPost": true,
+              "apiUrl": "/youtubei/v1/browse/edit_playlist"
+            }
+          },
+          "playlistEditEndpoint": {
+            "playlistId": "WL",
+            "actions": [
+              {
+                "addedVideoId": "nfWlot6h_JM",
+                "action": "ACTION_ADD_VIDEO"
+              }
+            ]
+          }
+        },
+        "removeFromWatchLaterCommand": {
+          "commandMetadata": {
+            "webCommandMetadata": {
+              "sendPost": true,
+              "apiUrl": "/youtubei/v1/browse/edit_playlist"
+            }
+          },
+          "playlistEditEndpoint": {
+            "playlistId": "WL",
+            "actions": [
+              {
+                "action": "ACTION_REMOVE_VIDEO_BY_VIDEO_ID",
+                "removedVideoId": "nfWlot6h_JM"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "storyboards": {
+    "playerStoryboardSpecRenderer": {
+      "spec": "https://i.ytimg.com/sb/nfWlot6h_JM/storyboard3_L$L/$N.jpg?sqp=%5Bredacted%5D",
+      "recommendedLevel": 3,
+      "fineScrubbingRecommendedLevel": 2,
+      "highResolutionRecommendedLevel": 3
+    }
+  },
+  "microformat": {
+    "playerMicroformatRenderer": {
+      "thumbnail": {
+        "thumbnails": [
+          {
+            "url": "https://i.ytimg.com/vi/nfWlot6h_JM/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        ]
+      },
+      "embed": {
+        "iframeUrl": "https://www.youtube.com/embed/nfWlot6h_JM",
+        "width": 1280,
+        "height": 720
+      },
+      "title": {
+        "simpleText": "Taylor Swift - Shake It Off"
+      },
+      "description": {
+        "simpleText": "Music video by Taylor Swift performing Shake It Off. (C) 2014 Taylor Swift.\n\nStream/download ‘The Life of a Showgirl’ - https://taylor.lnk.to/TSTheLifeofaShowgirlYD\n\n►Shop Merch: http://taylor.lnk.to/store\n►Subscribe to Taylor Swift on YouTube: https://ts.lnk.to/subscribe\n\n►Follow Taylor Swift Online:\nTikTok: http://tiktok.com/@taylorswift\nInstagram: http://instagram.com/taylorswift\nTwitter: http://twitter.com/taylorswift13\nSnapchat: http://snapchat.com/add/taylorswift\nFacebook: http://facebook.com/taylorswift\nTumblr: http://taylorswift.tumblr.com\nWebsite: http://www.taylorswift.com\n\n►Follow Taylor Nation Online:\nTikTok: http://tiktok.com/@taylornation\nInstagram: http://instagram.com/taylornation\nYouTube: https://youtube.com/taylornation\nTwitter: http://twitter.com/taylornation13\nTumblr: http://taylornation.tumblr.com\n\n#TaylorSwift #ShakeItOff"
+      },
+      "lengthSeconds": "242",
+      "ownerProfileUrl": "http://www.youtube.com/@TaylorSwift",
+      "externalChannelId": "UCqECaJ8Gagnn7YCbPEzWH6g",
+      "isFamilySafe": true,
+      "availableCountries": [
+        "AD",
+        "AE",
+        "AF",
+        "AG",
+        "AI",
+        "AL",
+        "AM",
+        "AO",
+        "AQ",
+        "AR",
+        "AS",
+        "AT",
+        "AU",
+        "AW",
+        "AX",
+        "AZ",
+        "BA",
+        "BB",
+        "BD",
+        "BE",
+        "BF",
+        "BG",
+        "BH",
+        "BI",
+        "BJ",
+        "BL",
+        "BM",
+        "BN",
+        "BO",
+        "BQ",
+        "BR",
+        "BS",
+        "BT",
+        "BV",
+        "BW",
+        "BY",
+        "BZ",
+        "CA",
+        "CC",
+        "CD",
+        "CF",
+        "CG",
+        "CH",
+        "CI",
+        "CK",
+        "CL",
+        "CM",
+        "CN",
+        "CO",
+        "CR",
+        "CU",
+        "CV",
+        "CW",
+        "CX",
+        "CY",
+        "CZ",
+        "DE",
+        "DJ",
+        "DK",
+        "DM",
+        "DO",
+        "DZ",
+        "EC",
+        "EE",
+        "EG",
+        "EH",
+        "ER",
+        "ES",
+        "ET",
+        "FI",
+        "FJ",
+        "FK",
+        "FM",
+        "FO",
+        "FR",
+        "GA",
+        "GB",
+        "GD",
+        "GE",
+        "GF",
+        "GG",
+        "GH",
+        "GI",
+        "GL",
+        "GM",
+        "GN",
+        "GP",
+        "GQ",
+        "GR",
+        "GS",
+        "GT",
+        "GU",
+        "GW",
+        "GY",
+        "HK",
+        "HM",
+        "HN",
+        "HR",
+        "HT",
+        "HU",
+        "ID",
+        "IE",
+        "IL",
+        "IM",
+        "IN",
+        "IO",
+        "IQ",
+        "IR",
+        "IS",
+        "IT",
+        "JE",
+        "JM",
+        "JO",
+        "JP",
+        "KE",
+        "KG",
+        "KH",
+        "KI",
+        "KM",
+        "KN",
+        "KP",
+        "KR",
+        "KW",
+        "KY",
+        "KZ",
+        "LA",
+        "LB",
+        "LC",
+        "LI",
+        "LK",
+        "LR",
+        "LS",
+        "LT",
+        "LU",
+        "LV",
+        "LY",
+        "MA",
+        "MC",
+        "MD",
+        "ME",
+        "MF",
+        "MG",
+        "MH",
+        "MK",
+        "ML",
+        "MM",
+        "MN",
+        "MO",
+        "MP",
+        "MQ",
+        "MR",
+        "MS",
+        "MT",
+        "MU",
+        "MV",
+        "MW",
+        "MX",
+        "MY",
+        "MZ",
+        "NA",
+        "NC",
+        "NE",
+        "NF",
+        "NG",
+        "NI",
+        "NL",
+        "NO",
+        "NP",
+        "NR",
+        "NU",
+        "NZ",
+        "OM",
+        "PA",
+        "PE",
+        "PF",
+        "PG",
+        "PH",
+        "PK",
+        "PL",
+        "PM",
+        "PN",
+        "PR",
+        "PS",
+        "PT",
+        "PW",
+        "PY",
+        "QA",
+        "RE",
+        "RO",
+        "RS",
+        "RU",
+        "RW",
+        "SA",
+        "SB",
+        "SC",
+        "SD",
+        "SE",
+        "SG",
+        "SH",
+        "SI",
+        "SJ",
+        "SK",
+        "SL",
+        "SM",
+        "SN",
+        "SO",
+        "SR",
+        "SS",
+        "ST",
+        "SV",
+        "SX",
+        "SY",
+        "SZ",
+        "TC",
+        "TD",
+        "TF",
+        "TG",
+        "TH",
+        "TJ",
+        "TK",
+        "TL",
+        "TM",
+        "TN",
+        "TO",
+        "TR",
+        "TT",
+        "TV",
+        "TW",
+        "TZ",
+        "UA",
+        "UG",
+        "UM",
+        "US",
+        "UY",
+        "UZ",
+        "VA",
+        "VC",
+        "VE",
+        "VG",
+        "VI",
+        "VN",
+        "VU",
+        "WF",
+        "WS",
+        "YE",
+        "YT",
+        "ZA",
+        "ZM",
+        "ZW"
+      ],
+      "isUnlisted": false,
+      "hasYpcMetadata": false,
+      "viewCount": "3741840281",
+      "category": "Music",
+      "publishDate": "2014-08-18T14:18:00-07:00",
+      "ownerChannelName": "Taylor Swift",
+      "uploadDate": "2014-08-18T14:18:00-07:00",
+      "isShortsEligible": false,
+      "externalVideoId": "nfWlot6h_JM",
+      "likeCount": "14384313",
+      "canonicalUrl": "https://www.youtube.com/watch?v=%5Bredacted%5D"
+    }
+  },
+  "cards": {
+    "cardCollectionRenderer": {
+      "cards": [
+        {
+          "cardRenderer": {
+            "teaser": {
+              "simpleCardTeaserRenderer": {
+                "message": {
+                  "simpleText": "View corrections"
+                },
+                "prominent": true,
+                "logVisibilityUpdates": true,
+                "onTapCommand": {
+                  "changeEngagementPanelVisibilityAction": {
+                    "targetId": "engagement-panel-error-corrections",
+                    "visibility": "ENGAGEMENT_PANEL_VISIBILITY_EXPANDED"
+                  }
+                }
+              }
+            },
+            "cueRanges": [
+              {
+                "startCardActiveMs": "0",
+                "endCardActiveMs": "5000",
+                "teaserDurationMs": "6000",
+                "iconAfterTeaserMs": "5000"
+              }
+            ]
+          }
+        }
+      ],
+      "headerText": {
+        "simpleText": "From Taylor Swift"
+      },
+      "icon": {
+        "infoCardIconRenderer": {}
+      },
+      "closeButton": {
+        "infoCardIconRenderer": {}
+      },
+      "allowTeaserDismiss": true,
+      "logIconVisibilityUpdates": true
+    }
+  },
+  "messages": [
+    {
+      "mealbarPromoRenderer": {
+        "icon": {
+          "thumbnails": [
+            {
+              "url": "https://www.gstatic.com/youtube/img/promos/growth/32565a681f5420b051f863e20a723490d94d07306de7b379862f0ec4a0d6676c_384x384.png",
+              "width": 384,
+              "height": 384
+            }
+          ]
+        },
+        "messageTexts": [
+          {
+            "runs": [
+              {
+                "text": "Our desktop experience was built to be your music destination. Listen to official albums & more."
+              }
+            ]
+          }
+        ],
+        "actionButton": {
+          "buttonRenderer": {
+            "style": "STYLE_MONO_FILLED",
+            "size": "SIZE_DEFAULT",
+            "text": {
+              "runs": [
+                {
+                  "text": "Check it out"
+                }
+              ]
+            },
+            "command": {
+              "commandExecutorCommand": {
+                "commands": [
+                  {
+                    "commandMetadata": {
+                      "webCommandMetadata": {
+                        "url": "https://music.youtube.com/",
+                        "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                        "rootVe": 83769
+                      }
+                    },
+                    "urlEndpoint": {
+                      "url": "https://music.youtube.com/",
+                      "target": "TARGET_NEW_WINDOW"
+                    }
+                  },
+                  {
+                    "commandMetadata": {
+                      "webCommandMetadata": {
+                        "sendPost": true,
+                        "apiUrl": "/youtubei/v1/feedback"
+                      }
+                    },
+                    "feedbackEndpoint": {
+                      "uiActions": {
+                        "hideEnclosingContainer": true
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "dismissButton": {
+          "buttonRenderer": {
+            "style": "STYLE_MONO_TONAL",
+            "size": "SIZE_DEFAULT",
+            "text": {
+              "runs": [
+                {
+                  "text": "No thanks"
+                }
+              ]
+            },
+            "command": {
+              "commandExecutorCommand": {
+                "commands": [
+                  {
+                    "commandMetadata": {
+                      "webCommandMetadata": {
+                        "sendPost": true,
+                        "apiUrl": "/youtubei/v1/feedback"
+                      }
+                    },
+                    "feedbackEndpoint": {
+                      "uiActions": {
+                        "hideEnclosingContainer": true
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "triggerCondition": "TRIGGER_CONDITION_POST_AD",
+        "style": "STYLE_MODERN",
+        "impressionEndpoints": [
+          {
+            "commandMetadata": {
+              "webCommandMetadata": {
+                "sendPost": true,
+                "apiUrl": "/youtubei/v1/feedback"
+              }
+            },
+            "feedbackEndpoint": {
+              "uiActions": {
+                "hideEnclosingContainer": false
+              }
+            }
+          }
+        ],
+        "isVisible": true,
+        "messageTitle": {
+          "runs": [
+            {
+              "text": "Where music meets your desktop"
+            }
+          ]
+        },
+        "iconDark": {
+          "thumbnails": [
+            {
+              "url": "https://www.gstatic.com/youtube/img/promos/growth/32565a681f5420b051f863e20a723490d94d07306de7b379862f0ec4a0d6676c_384x384.png",
+              "width": 384,
+              "height": 384
+            }
+          ]
+        },
+        "supplementalText": {
+          "runs": [
+            {
+              "text": "Terms apply. Cancel anytime"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "endscreen": {
+    "endscreenRenderer": {
+      "elements": [
+        {
+          "endscreenElementRenderer": {
+            "style": "VIDEO",
+            "image": {
+              "thumbnails": [
+                {
+                  "url": "https://i.ytimg.com/vi/ko70cExuzZM/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+                  "width": 168,
+                  "height": 94
+                },
+                {
+                  "url": "https://i.ytimg.com/vi/ko70cExuzZM/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+                  "width": 196,
+                  "height": 110
+                },
+                {
+                  "url": "https://i.ytimg.com/vi/ko70cExuzZM/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+                  "width": 246,
+                  "height": 138
+                },
+                {
+                  "url": "https://i.ytimg.com/vi/ko70cExuzZM/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+                  "width": 336,
+                  "height": 188
+                },
+                {
+                  "url": "https://i.ytimg.com/vi_webp/ko70cExuzZM/maxresdefault.webp",
+                  "width": 1920,
+                  "height": 1080
+                }
+              ]
+            },
+            "left": 0.022807017,
+            "width": 0.32280701,
+            "top": 0.52492213,
+            "aspectRatio": 1.7777778,
+            "startMs": "221532",
+            "endMs": "241532",
+            "title": {
+              "accessibility": {
+                "accessibilityData": {
+                  "label": "Taylor Swift - The Fate of Ophelia (Official Music Video), video"
+                }
+              },
+              "simpleText": "Taylor Swift - The Fate of Ophelia (Official Music Video)"
+            },
+            "metadata": {
+              "simpleText": "552,809,667 views"
+            },
+            "endpoint": {
+              "commandMetadata": {
+                "webCommandMetadata": {
+                  "url": "/watch?v=%5Bredacted%5D",
+                  "webPageType": "WEB_PAGE_TYPE_WATCH",
+                  "rootVe": 3832
+                },
+                "interactionLoggingCommandMetadata": {
+                  "loggingExpectations": {
+                    "screenCreatedLoggingExpectations": {
+                      "expectedParentScreens": [
+                        {
+                          "screenVeType": 3832
+                        }
+                      ]
+                    }
+                  }
+                }
+              },
+              "watchEndpoint": {
+                "videoId": "ko70cExuzZM",
+                "watchEndpointSupportedOnesieConfig": {
+                  "html5PlaybackOnesieConfig": {
+                    "commonConfig": {
+                      "url": "https://rr3---sn-qxaelnez.googlevideo.com/initplayback?source=%5Bredacted%5D&oeis=%5Bredacted%5D&c=%5Bredacted%5D&oad=%5Bredacted%5D&ovd=%5Bredacted%5D&oaad=%5Bredacted%5D&oavd=%5Bredacted%5D&ocs=%5Bredacted%5D&oewis=%5Bredacted%5D&oputc=%5Bredacted%5D&epbp=%5Bredacted%5D&msp=%5Bredacted%5D&odepv=%5Bredacted%5D&id=%5Bredacted%5D&ip=%5Bredacted%5D&initcwndbps=%5Bredacted%5D&mt=%5Bredacted%5D&oweuc=%5Bredacted%5D"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "9099777305079402362",
+            "thumbnailOverlays": [
+              {
+                "thumbnailOverlayTimeStatusRenderer": {
+                  "text": {
+                    "accessibility": {
+                      "accessibilityData": {
+                        "label": "3 minutes, 59 seconds"
+                      }
+                    },
+                    "simpleText": "3:59"
+                  },
+                  "style": "DEFAULT"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "endscreenElementRenderer": {
+            "style": "PLAYLIST",
+            "image": {
+              "thumbnails": [
+                {
+                  "url": "https://i.ytimg.com/vi/WqbJT_vC0rs/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+                  "width": 168,
+                  "height": 94
+                },
+                {
+                  "url": "https://i.ytimg.com/vi/WqbJT_vC0rs/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+                  "width": 196,
+                  "height": 110
+                },
+                {
+                  "url": "https://i.ytimg.com/vi/WqbJT_vC0rs/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+                  "width": 246,
+                  "height": 138
+                },
+                {
+                  "url": "https://i.ytimg.com/vi/WqbJT_vC0rs/hqdefault.jpg?sqp=%5Bredacted%5D&rs=%5Bredacted%5D",
+                  "width": 336,
+                  "height": 188
+                },
+                {
+                  "url": "https://i.ytimg.com/vi/WqbJT_vC0rs/maxresdefault.jpg",
+                  "width": 1920,
+                  "height": 1080
+                }
+              ]
+            },
+            "playlistLength": {
+              "simpleText": "26 videos"
+            },
+            "left": 0.65438598,
+            "width": 0.32280701,
+            "top": 0.52492213,
+            "aspectRatio": 1.7777778,
+            "startMs": "221532",
+            "endMs": "241532",
+            "title": {
+              "accessibility": {
+                "accessibilityData": {
+                  "label": "26 videos, Taylor Swift - The Life of a Showgirl"
+                }
+              },
+              "simpleText": "Taylor Swift - The Life of a Showgirl"
+            },
+            "metadata": {
+              "simpleText": "by Taylor Swift"
+            },
+            "endpoint": {
+              "commandMetadata": {
+                "webCommandMetadata": {
+                  "url": "/watch?v=%5Bredacted%5D&list=%5Bredacted%5D",
+                  "webPageType": "WEB_PAGE_TYPE_WATCH",
+                  "rootVe": 3832
+                }
+              },
+              "watchEndpoint": {
+                "videoId": "WqbJT_vC0rs",
+                "playlistId": "PLINj2JJM1jxMKUSiMcZPYvORDFh5sa8XH",
+                "loggingContext": {
+                  "vssLoggingContext": {}
+                },
+                "watchEndpointSupportedOnesieConfig": {
+                  "html5PlaybackOnesieConfig": {
+                    "commonConfig": {
+                      "url": "https://rr4---sn-qxaelnll.googlevideo.com/initplayback?source=%5Bredacted%5D&oeis=%5Bredacted%5D&c=%5Bredacted%5D&oad=%5Bredacted%5D&ovd=%5Bredacted%5D&oaad=%5Bredacted%5D&oavd=%5Bredacted%5D&ocs=%5Bredacted%5D&oewis=%5Bredacted%5D&oputc=%5Bredacted%5D&epbp=%5Bredacted%5D&msp=%5Bredacted%5D&odepv=%5Bredacted%5D&id=%5Bredacted%5D&ip=%5Bredacted%5D&initcwndbps=%5Bredacted%5D&mt=%5Bredacted%5D&oweuc=%5Bredacted%5D"
+                    }
+                  }
+                }
+              }
+            },
+            "id": "9099777305079398899"
+          }
+        }
+      ],
+      "startMs": "221532",
+      "hideButton": {
+        "toggleButtonViewModel": {
+          "defaultButtonViewModel": {
+            "buttonViewModel": {
+              "iconName": "VISIBILITY_OFF",
+              "title": "Hide",
+              "onTap": {
+                "innertubeCommand": {
+                  "changeCreatorEndscreenVisibilityCommand": {
+                    "hide": true
+                  }
+                }
+              },
+              "accessibilityText": "Hide endscreen cards",
+              "style": "BUTTON_VIEW_MODEL_STYLE_OVERLAY",
+              "type": "BUTTON_VIEW_MODEL_TYPE_FILLED",
+              "buttonSize": "BUTTON_VIEW_MODEL_SIZE_XSMALL"
+            }
+          },
+          "toggledButtonViewModel": {
+            "buttonViewModel": {
+              "iconName": "VISIBILITY",
+              "title": "Show",
+              "onTap": {
+                "innertubeCommand": {
+                  "changeCreatorEndscreenVisibilityCommand": {
+                    "hide": false
+                  }
+                }
+              },
+              "accessibilityText": "Show endscreen cards",
+              "style": "BUTTON_VIEW_MODEL_STYLE_OVERLAY",
+              "type": "BUTTON_VIEW_MODEL_TYPE_FILLED",
+              "buttonSize": "BUTTON_VIEW_MODEL_SIZE_XSMALL"
+            }
+          },
+          "rendererContext": {
+            "loggingContext": {
+              "loggingDirectives": {
+                "visibility": {
+                  "types": "12"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "adPlacements": [
+    {
+      "adPlacementRenderer": {
+        "config": {
+          "adPlacementConfig": {
+            "kind": "AD_PLACEMENT_KIND_START",
+            "adTimeOffset": {
+              "offsetStartMilliseconds": "0",
+              "offsetEndMilliseconds": "-1"
+            },
+            "hideCueRangeMarker": true
+          }
+        },
+        "renderer": {
+          "clientForecastingAdRenderer": {}
+        },
+        "adSlotLoggingData": {}
+      }
+    }
+  ],
+  "frameworkUpdates": {
+    "entityBatchUpdate": {
+      "mutations": [],
+      "timestamp": {
+        "seconds": "1792519987",
+        "nanos": 725359282
+      }
+    }
+  }
+}

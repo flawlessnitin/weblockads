@@ -1,0 +1,52 @@
+{
+  "builtAt": 1792511530136,
+  "rulesets": [
+    {
+      "id": "ublock",
+      "enabled": true,
+      "ruleCount": 1182
+    },
+    {
+      "id": "easylist",
+      "enabled": true,
+      "ruleCount": 56372
+    },
+    {
+      "id": "easyprivacy",
+      "enabled": true,
+      "ruleCount": 56300
+    },
+    {
+      "id": "indianlist",
+      "enabled": true,
+      "ruleCount": 5381
+    }
+  ],
+  "sources": [
+    {
+      "id": "ublock",
+      "url": "https://ublockorigin.github.io/uAssets/filters/filters.txt",
+      "sha256": "50e8f75fee3e863417ff1dea445a542053962fda37591dda1af082d3f11895c9"
+    },
+    {
+      "id": "ublock-quick-fixes",
+      "url": "https://ublockorigin.github.io/uAssets/filters/quick-fixes.txt",
+      "sha256": "64a96634d7da98711ab89cfba98cfbafd1d8c2dcecf9f2ffcdabc383c7719575"
+    },
+    {
+      "id": "easylist",
+      "url": "https://easylist.to/easylist/easylist.txt",
+      "sha256": "a52bce79b8fe79982e6764d2d3594640df1ce646c94d8d87db68d1158472c044"
+    },
+    {
+      "id": "easyprivacy",
+      "url": "https://easylist.to/easylist/easyprivacy.txt",
+      "sha256": "3688cb71e8340fd45e4fab24da8b53aa59aa5086e268b9c9f92a72cab7b7923e"
+    },
+    {
+      "id": "indianlist",
+      "url": "https://easylist-downloads.adblockplus.org/indianlist.txt",
+      "sha256": "84b00c71c93283cbab22561fb0b3bef60e87f715a2518af4456425608e3fd36b"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+name: Nightly YouTube check
+on:
+  schedule:
+    - cron: '30 21 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: nightly-youtube
+  cancel-in-progress: false
+jobs:
+  youtube:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          ADSHIELD_REPO: ${{ github.repository }}
+      - run: npx playwright install --with-deps chromium
+      - name: Check signed-out YouTube playback
+        id: playback
+        continue-on-error: true
+        run: npm run e2e
+      - name: Watch upstream filter changes
+        id: upstream
+        continue-on-error: true
+        run: npx tsx scripts/nightly/check-upstream.ts > test-results/upstream.json
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Summarize and notify
+        if: always()
+        uses: actions/github-script@v8
+        env:
+          PLAYBACK_OUTCOME: ${{ steps.playback.outcome }}
+          UPSTREAM_OUTCOME: ${{ steps.upstream.outcome }}
+        with:
+          script: |
+            const fs = require('node:fs');
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const ownerMention = `@${context.repo.owner}`;
+            async function notify(label, title, body) {
+              try { await github.rest.issues.getLabel({ ...context.repo, name: label }); }
+              catch (error) {
+                if (error.status !== 404) throw error;
+                await github.rest.issues.createLabel({ ...context.repo, name: label, color: '4f46e5' });
+              }
+              const issues = await github.paginate(github.rest.issues.listForRepo, { ...context.repo, state: 'open', labels: label, per_page: 100 });
+              const existing = issues.find(issue => !issue.pull_request);
+              if (existing) await github.rest.issues.createComment({ ...context.repo, issue_number: existing.number, body });
+              else await github.rest.issues.create({ ...context.repo, title, body, labels: [label] });
+            }
+            if (fs.existsSync('test-results/youtube-result.json')) {
+              const result = JSON.parse(fs.readFileSync('test-results/youtube-result.json', 'utf8'));
+              await core.summary.addRaw(`YouTube verdict: **${result.verdict}**\n`).write();
+              if (!result.observations.length) {
+                core.setFailed('Playback check produced no observations; inspect the runner log. No breakage issue opened.');
+              } else if (result.verdict === 'fail') {
+                await notify('youtube-broke', 'YouTube playback/ad-blocking check failed', `${ownerMention}\n\nNightly check failed. Follow docs/runbooks/youtube-broke.md.\n\n[Run](${runUrl})\n\n\`\`\`json\n${JSON.stringify(result.observations, null, 2)}\n\`\`\``);
+                core.setFailed('YouTube check failed');
+              } else if (result.verdict === 'inconclusive') {
+                await core.summary.addRaw('Bot/sign-in wall prevented a conclusive check. No breakage issue opened.\n').write();
+              }
+            } else if (process.env.PLAYBACK_OUTCOME === 'failure') {
+              core.setFailed('Playback check did not produce a result; inspect the runner log. No breakage issue opened.');
+            }
+            if (process.env.UPSTREAM_OUTCOME === 'success') {
+              const matches = JSON.parse(fs.readFileSync('test-results/upstream.json', 'utf8'));
+              if (matches.length) {
+                const links = matches.map(commit => `- [${commit.sha.slice(0, 7)}](https://github.com/uBlockOrigin/uAssets/commit/${commit.sha}) ${commit.message.split('\n')[0]}`).join('\n');
+                await notify('upstream-youtube', 'Upstream YouTube filters changed', `${ownerMention}\n\nNew YouTube filter changes are an early warning; check whether our rules need a fix.\n\n${links}\n\n[Run](${runUrl})`);
+              }
+            } else if (process.env.UPSTREAM_OUTCOME === 'failure') {
+              core.setFailed('Upstream API check failed; inspect the runner log.');
+            }
