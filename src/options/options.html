@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Settings</title><link rel="stylesheet" href="options.css"></head>
+<body>
+  <main>
+    <header><img src="icons/icon-48.png" width="36" height="36" alt=""><div><h1><span id="product-name"></span> settings</h1><p>Your choices stay on this device.</p></div></header>
+    <p id="status" role="status" hidden></p>
+    <section aria-labelledby="sites-heading"><h2 id="sites-heading">Sites turned off</h2><ul id="disabled-sites"></ul></section>
+    <section aria-labelledby="hides-heading"><h2 id="hides-heading">Hidden elements</h2><div id="hidden-elements"></div><p class="hint">Reload the affected page after removing a hidden element.</p></section>
+    <section aria-labelledby="features-heading"><h2 id="features-heading">Features</h2><label class="feature"><span>Block YouTube ads</span><input id="youtube-enabled" type="checkbox" disabled></label><p class="hint">Reload open YouTube tabs after changing this. Ads and trackers on other sites stay blocked.</p></section>
+    <section aria-labelledby="rules-heading"><h2 id="rules-heading">Rules</h2><p id="rules-info">Loading rules…</p><button id="check-updates" disabled>Check for updates now</button><p id="update-result" role="status"></p></section>
+    <footer><h2>About</h2><p id="version"></p><a id="license" href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener noreferrer">GPL-3.0 license</a> · <a id="notices" target="_blank" rel="noopener noreferrer">Third-party notices</a></footer>
+  </main>
+  <script src="options.js"></script>
+</body>
+</html>

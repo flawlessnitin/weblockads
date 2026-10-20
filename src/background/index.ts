@@ -31,6 +31,11 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
 chrome.tabs.onRemoved.addListener((tabId) => flushStats().then(() => chrome.storage.session.remove(`tab:${tabId}`)));
 
 chrome.runtime.onMessage.addListener((message: Message, sender, sendResponse) => {
+  if (message.type === 'settings:changed') {
+    getSettings().then(syncContentScripts).then(() => sendResponse({ ok: true }))
+      .catch(() => sendResponse({ error: 'Could not apply feature settings' }));
+    return true;
+  }
   if (message.type === 'picker:start' || message.type === 'picker:save') {
     const result = message.type === 'picker:start'
       ? chrome.scripting.executeScript({ target: { tabId: message.tabId }, files: ['content/picker.js'] })
